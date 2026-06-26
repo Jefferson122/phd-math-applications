@@ -1130,6 +1130,59 @@ const UNI = [
 }
 ];
 
+// ---- PROFESORES POR ÁREA (EDs & Análisis) ----
+const PROFS = {
+  gmu:[
+    {name:'Dr. Harbir Antil', area:'EDPs & Control Óptimo', rel:'Alto', note:'Especialista en control óptimo de ecuaciones en derivadas parciales. Análisis numérico y optimización de sistemas gobernados por EDPs — directamente alineado con EDs aplicadas. Cita su trabajo en control de fluidos o ecuaciones de obstáculo.'},
+    {name:'Dr. Evelyn Sander', area:'Sistemas Dinámicos & EDOs', rel:'Alto', note:'Investigación en bifurcaciones, caos y sistemas dinámicos no lineales. Muy conectado con la teoría de ecuaciones diferenciales ordinarias. Contacto ideal si tu tesis fue en EDOs o sistemas dinámicos.'},
+    {name:'Dr. Padmanabhan Seshaiyer', area:'EDPs & Métodos Numéricos', rel:'Alto', note:'Análisis numérico de EDPs y métodos de elementos finitos. Aplicaciones en biomecánica e ingeniería — alineado con ecuaciones diferenciales aplicadas.'},
+    {name:'Dr. Maria Emelianenko', area:'Matemática Computacional', rel:'Medio', note:'Dinámica de materiales y modelos matemáticos computacionales. Trabaja con sistemas de EDOs/EDPs en aplicaciones de física de materiales.'}
+  ],
+  georgetown:[
+    {name:'Verificar en math.georgetown.edu', area:'Análisis Geométrico / Armónico', rel:'Ver web', note:'Georgetown se enfoca en matemática pura (álgebra, topología, números). Para tu perfil en EDs, busca profesores en análisis armónico o análisis geométrico en el directorio de facultad del departamento.'}
+  ],
+  american:[
+    {name:'Verificar en american.edu/cas/math', area:'Matemática Aplicada / Análisis', rel:'Ver web', note:'AU tiene PhD en Math & Statistics con enfoque aplicado y conexiones con agencias federales (NSF, NIH). Revisa el directorio del departamento para profesores en análisis o ecuaciones diferenciales.'}
+  ],
+  umd:[
+    {name:'Dr. Eitan Tadmor', area:'EDPs Hiperbólicas & Métodos Numéricos', rel:'Alto', note:'Uno de los expertos mundiales en EDPs hiperbólicas, leyes de conservación y dinámica de fluidos. Contacto #1 en UMD si tu tesis involucró EDPs. Cita su trabajo en leyes de conservación o dinámica de partículas.'},
+    {name:'Dr. Pierre-Emmanuel Jabin', area:'EDPs & Ecuaciones Cinéticas', rel:'Alto', note:'Trabaja en ecuaciones cinéticas (tipo Boltzmann/Vlasov) y EDPs no lineales. Investigación en existencia y regularidad de soluciones — análisis puro avanzado.'},
+    {name:'Dr. Dionisios Margetis', area:'Matemática Aplicada & Asintóticas', rel:'Medio', note:'Asintóticas y EDPs con aplicaciones en física y nanotecnología. Matemática aplicada con alto rigor analítico.'},
+    {name:'Dr. Kasso Okoudjou', area:'Análisis Armónico & Análisis de Fourier', rel:'Medio', note:'Análisis de Fourier, marcos (frames) y análisis tiempo-frecuencia. Relacionado con análisis funcional y análisis aplicado.'}
+  ],
+  jhu:[
+    {name:'Dr. Christopher Sogge', area:'EDPs & Análisis Armónico', rel:'Alto', note:'Experto mundial en EDPs y análisis armónico — estimaciones espectrales y propagación de ondas. Muy relevante si tu tesis incluyó análisis o EDPs. Referencia: su libro "Fourier Integrals in Classical Analysis".'},
+    {name:'Dr. Hans Lindblad', area:'EDPs Hiperbólicas (Relatividad General)', rel:'Medio', note:'EDPs no lineales hiperbólicas en el contexto de la relatividad general matemática. Alto nivel de abstracción requerido.'},
+    {name:'Dr. Joel Spruck', area:'EDPs Elípticas & Geometría', rel:'Medio', note:'EDPs elípticas completamente no lineales y geometría diferencial. Ecuaciones de Monge-Ampère y curvatura prescrita.'}
+  ],
+  howard:[
+    {name:'Dr. Bourama Toni', area:'Sistemas Dinámicos & Ecuaciones Diferenciales', rel:'Alto', note:'Especialista en sistemas dinámicos, ecuaciones diferenciales y biomatemática. Contacto clave en Howard para estudiantes con tesis en EDs. Muy accesible para estudiantes internacionales.'},
+    {name:'Verificar en howard.edu/cnas/math', area:'Análisis & Matemática Aplicada', rel:'Ver web', note:'Howard tiene un programa amplio e inclusivo. Revisa el directorio del departamento para más profesores en análisis real, EDs o matemática aplicada.'}
+  ],
+  gwu:[
+    {name:'Dr. Maria Gualdani', area:'EDPs No Lineales & Ecuación de Boltzmann', rel:'Alto', note:'Investiga ecuaciones cinéticas y EDPs no lineales con aplicaciones en física de plasmas y dinámica de partículas — directamente relacionado con análisis y EDs avanzadas.'},
+    {name:'Verificar en math.gwu.edu', area:'Análisis & EDPs', rel:'Ver web', note:'Verifica en el directorio del departamento para profesores activos en análisis funcional o ecuaciones diferenciales.'}
+  ],
+  cua:[
+    {name:'Verificar en math.cua.edu', area:'EDs & Análisis', rel:'Ver web', note:'CUA tiene un programa pequeño y personalizado. Contacta directamente al Director de Posgrado de Matemáticas — el equipo es accesible y puede orientarte sobre profesores disponibles en tu área.'}
+  ],
+  umbc:[
+    {name:'Dr. Jonathan Bell', area:'Biomatemática & EDPs (Reacción-Difusión)', rel:'Medio', note:'Modelos matemáticos en biología usando EDPs y sistemas de reacción-difusión — conexión directa con ecuaciones diferenciales aplicadas.'},
+    {name:'Verificar en math.umbc.edu', area:'Análisis Aplicado & Estadística', rel:'Ver web', note:'UMBC es fuerte en estadística matemática y análisis aplicado. Revisa el departamento para más opciones en EDs o análisis.'}
+  ],
+  morgan:[
+    {name:'Verificar en morgan.edu/academics', area:'EDs & Análisis', rel:'Ver web', note:'Morgan State tiene un programa pequeño e inclusivo (HBCU). Contacta directamente al Graduate Coordinator — el equipo es muy accesible y puede guiarte sobre investigación disponible en tu área.'}
+  ]
+};
+UNI.forEach(u => u.profs = PROFS[u.id] || []);
+
+// Ordenar tarjetas: primero por fecha de apertura de convocatoria, luego por deadline
+const _esM={Ene:1,Feb:2,Mar:3,Abr:4,May:5,Jun:6,Jul:7,Ago:8,Sep:9,Oct:10,Nov:11,Dic:12};
+function _parseOpen(s){const[mn,yr]=s.split(' ');return parseInt(yr)*100+(_esM[mn]||0);}
+function _parseDL(s){const m=s.match(/(\d+)\s+(\w+)\s+(\d+)/);if(!m)return 99999999;return parseInt(m[3])*10000+(_esM[m[2]]||0)*100+parseInt(m[1]);}
+UNI.sort((a,b)=>{const oa=_parseOpen(a.deadlineOpen),ob=_parseOpen(b.deadlineOpen);if(oa!==ob)return oa-ob;return _parseDL(a.deadline)-_parseDL(b.deadline);});
+UNI.forEach((u,i)=>u.priority=i+1);
+
 // ---- HELPERS ----
 function rankClass(p){ if(p<=3) return 'rp1'; if(p<=6) return 'rp2'; if(p<=8) return 'rp3'; return 'rp4'; }
 function matchColor(m){ return m>=65?'#58CC02':m>=45?'#FFB800':'#FF4B4B'; }
@@ -1276,12 +1329,12 @@ function openModal(id){
       </div>
     </div>`;
 
-  const tabs=['📊 Programa','📈 Estadísticas','📅 Timeline','📄 Documentos','📚 Materias','✉️ Email'];
+  const tabs=['📊 Programa','📈 Estadísticas','📅 Timeline','📄 Documentos','👨‍🏫 Profesores','📚 Materias','✉️ Email'];
   document.getElementById('mtabs').innerHTML = tabs.map((t,i)=>
     `<div class="tab${i===0?' on':''}" onclick="switchTab(${i})">${t}</div>`).join('');
 
   document.getElementById('mcontent').innerHTML =
-    tabPrograma(u) + tabStats(u) + tabTimeline(u) + tabDocs(u) + tabCourses(u) + tabEmail(u);
+    tabPrograma(u) + tabStats(u) + tabTimeline(u) + tabDocs(u) + tabProfesores(u) + tabCourses(u) + tabEmail(u);
 
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow='hidden';
@@ -1440,6 +1493,25 @@ function tabEmail(u){ return `
   <div class="note-box">3. <strong>Pregunta directamente</strong> si tiene plazas con TA o RA para Fall 2027. No sea ambiguo.</div>
   <div class="note-box">4. <strong>Máximo 200 palabras</strong> — los profesores reciben decenas de emails. El tuyo debe ser claro y directo.</div>
   <div class="note-box">5. <strong>Follow-up a las 2 semanas</strong> si no responden — es completamente normal y aceptable en academia.</div>
+</div>`; }
+
+function tabProfesores(u){ return `
+<div class="tab-content">
+  <div class="note-box g" style="margin-bottom:14px">
+    <strong>Tu área: Ecuaciones Diferenciales & Análisis.</strong> Estos son los profesores más alineados con tu tesis. Siempre verifica en el sitio web del departamento que siguen activos y aceptando estudiantes nuevos.
+  </div>
+  ${u.profs.map(p=>`
+  <div class="doc-item">
+    <div class="doc-icon">${p.rel==='Alto'?'🎯':p.rel==='Medio'?'🔵':'🔍'}</div>
+    <div class="doc-text">
+      <div class="doc-name">${p.name}</div>
+      <div class="doc-detail"><strong>${p.area}</strong><br>${p.note}</div>
+    </div>
+    <div class="doc-status ${p.rel==='Alto'?'rec':'opt'}">${p.rel==='Alto'?'Alta relevancia':p.rel==='Medio'?'Relevante':'Ver sitio web'}</div>
+  </div>`).join('')}
+  <div class="note-box gold" style="margin-top:12px">
+    <strong>Cómo usarlo:</strong> Busca el paper más reciente del profesor en Google Scholar → léelo → menciona UN resultado específico en tu email. Eso te diferencia del 99% de los aplicantes. Recuerda mencionar que tu tesis fue en ecuaciones diferenciales y que quieres continuar en esa línea o en análisis.
+  </div>
 </div>`; }
 
 function copyEmail(id){
