@@ -239,6 +239,12 @@ a:hover{text-decoration:underline}
 .email-box strong{color:var(--text)}
 .copy-btn{background:var(--blue);border:none;color:#fff;border-radius:10px;padding:8px 18px;font-size:.76rem;font-weight:800;margin-top:10px;transition:.15s;display:inline-block;cursor:pointer}
 .copy-btn:hover{background:var(--blue-d);transform:translateY(-1px);box-shadow:0 4px 12px rgba(28,176,246,.3)}
+.gmail-btn{background:var(--green);border:none;color:#fff;border-radius:10px;padding:8px 18px;font-size:.76rem;font-weight:800;transition:.15s;display:inline-block;cursor:pointer;text-decoration:none;font-family:inherit}
+.gmail-btn:hover{background:var(--green-d);transform:translateY(-1px);box-shadow:0 4px 12px rgba(88,204,2,.3);color:#fff;text-decoration:none}
+.gmail-btn.b{background:var(--blue)}.gmail-btn.b:hover{background:var(--blue-d);box-shadow:0 4px 12px rgba(28,176,246,.3)}
+.email-header{background:var(--card2);border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:.76rem;line-height:1.6}
+.email-header .eh-lbl{color:var(--sub)}.email-header .eh-name{color:var(--text);font-weight:700}.email-header .eh-addr{color:var(--blue)}
+.btn-row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center}
 
 .hidden{display:none!important}
 
@@ -369,7 +375,7 @@ a:hover{text-decoration:underline}
   <div class="pdiv"></div>
   <div class="ps"><span class="v info">VA</span><span class="l">Residente</span></div>
   <div class="pdiv"></div>
-  <div class="ps"><span class="v ok">10</span><span class="l">Programas</span></div>
+  <div class="ps"><span class="v ok">8</span><span class="l">Programas</span></div>
   <div class="pdiv"></div>
   <div class="ps"><span class="v warn">&lt;50mi</span><span class="l">Radio máx.</span></div>
   <span class="pbadge f1">F1 Internacional</span>
@@ -380,7 +386,7 @@ a:hover{text-decoration:underline}
 
 <div class="alert">
   <div class="alert-icon">⚡</div>
-  <div><strong>Acción inmediata:</strong> Georgetown (1 Dic 2026) y UMD (15 Dic 2026) son tus deadlines más próximos. Contacta profesores <strong>este mes</strong> en ambas. Con TA/RA no necesitas bank statements para tu I-20 — el programa financia tu visa.</div>
+  <div><strong>Acción inmediata:</strong> UMD College Park (15 Dic 2026) es tu deadline más cercano — contacta profesores en julio. Tienes tesis en EDPs + 3 cartas listas + puedes obtener Duolingo, GRE Math y GRE General. Estás en muy buena posición para todos los 8 programas.</div>
 </div>
 
 <!-- APPLICATION PHASES -->
@@ -392,16 +398,9 @@ a:hover{text-decoration:underline}
       <div class="phase-head">
         <div class="phase-num">⚡ Fase 1 — Urgente</div>
         <div class="phase-date-range">Dic 2026</div>
-        <div class="phase-count">3 programas · Reach · Empieza YA en junio</div>
+        <div class="phase-count">1 programa · Match · Deadline más cercano · Empieza Sep 2026</div>
       </div>
       <div class="phase-schools">
-        <div class="phase-school-row" onclick="openModal('georgetown')">
-          <div class="phase-school-dot dot-r"></div>
-          <div class="phase-school-info">
-            <div class="phase-school-name">Georgetown Univ.</div>
-            <div class="phase-school-dl">⏰ 1 Dic 2026 · 📂 Ago 2026</div>
-          </div>
-        </div>
         <div class="phase-school-row" onclick="openModal('umd')">
           <div class="phase-school-dot dot-m"></div>
           <div class="phase-school-info">
@@ -409,23 +408,16 @@ a:hover{text-decoration:underline}
             <div class="phase-school-dl">⏰ 15 Dic 2026 · 📂 Sep 2026</div>
           </div>
         </div>
-        <div class="phase-school-row" onclick="openModal('jhu')">
-          <div class="phase-school-dot dot-r"></div>
-          <div class="phase-school-info">
-            <div class="phase-school-name">Johns Hopkins Univ.</div>
-            <div class="phase-school-dl">⏰ 15 Dic 2026 · 📂 Sep 2026</div>
-          </div>
-        </div>
       </div>
       <div class="phase-divider"></div>
       <div class="phase-reqs">
         <div class="phase-req-title">📋 Ten listo antes de Nov 2026</div>
-        <div class="phase-req-item">🎯 <strong>Duolingo ≥ 125</strong></div>
-        <div class="phase-req-item">📐 <strong>GRE Math &gt; 700–780</strong></div>
-        <div class="phase-req-item">📝 <strong>SOP 3 págs.</strong> muy específico</div>
-        <div class="phase-req-item">✉️ <strong>3 Cartas</strong> de investigadores</div>
+        <div class="phase-req-item">🎯 <strong>Duolingo ≥ 125</strong> — tienes tiempo</div>
+        <div class="phase-req-item">📐 <strong>GRE Math &gt; 700</strong> — sí puedes tomarlo</div>
+        <div class="phase-req-item">📝 <strong>SOP 3 págs.</strong> menciona tesis en EDPs</div>
+        <div class="phase-req-item">✉️ <strong>3 Cartas</strong> ya las tienes ✓</div>
         <div class="phase-req-item">📊 <strong>Transcripts</strong> apostillados</div>
-        <div class="phase-req-item">👤 <strong>Contacta profesores</strong> Jun/Jul 2026</div>
+        <div class="phase-req-item">👤 <strong>Contacta profesores</strong> Jul/Ago 2026</div>
       </div>
     </div>
 
@@ -690,43 +682,6 @@ a:hover{text-decoration:underline}
   </div>
 </div>
 
-<!-- GITHUB PAGES -->
-<div class="gh-section" id="githubsec">
-  <div class="collapsible-header" onclick="toggleSection('githubsec')">
-    <div class="coll-left">
-      <span>🚀</span>
-      <span class="gh-title">Subir a GitHub Pages — Guía paso a paso</span>
-      <span class="coll-badge" style="background:#0a1f0a;color:var(--green);border-color:#276749">5 pasos · gratis</span>
-    </div>
-    <span class="gh-caret">▼</span>
-  </div>
-  <div class="gh-body">
-    <div class="note-box g" style="margin-bottom:12px">Tu página ya está 100% lista. Es HTML puro — funciona en GitHub Pages sin ninguna configuración adicional.</div>
-    <div class="gh-step">
-      <div class="gh-step-n">1</div>
-      <div class="gh-step-t"><strong>Crea cuenta en github.com</strong><br>Ve a github.com → Sign up. Es gratis. Usa tu email académico si tienes (activa GitHub Pro gratis con .edu).</div>
-    </div>
-    <div class="gh-step">
-      <div class="gh-step-n">2</div>
-      <div class="gh-step-t"><strong>Crea un repositorio público</strong><br>Botón "+" → New repository → Name: <span class="gh-code">phd-math-tracker</span> → Visibility: <strong>Public</strong> → ✅ Add a README file → Create repository</div>
-    </div>
-    <div class="gh-step">
-      <div class="gh-step-n">3</div>
-      <div class="gh-step-t"><strong>Renombra el archivo a</strong> <span class="gh-code">index.html</span><br>En tu computador, renombra <code style="color:#68d391">phd_math_universities.html</code> → <code style="color:#68d391">index.html</code>. GitHub Pages busca este nombre automáticamente en la raíz.</div>
-    </div>
-    <div class="gh-step">
-      <div class="gh-step-n">4</div>
-      <div class="gh-step-t"><strong>Sube el archivo al repositorio</strong><br>En tu repo en GitHub: <strong>Add file → Upload files</strong> → Arrastra tu <span class="gh-code">index.html</span> → Escribe un mensaje de commit → <strong>Commit changes</strong></div>
-    </div>
-    <div class="gh-step">
-      <div class="gh-step-n">5</div>
-      <div class="gh-step-t"><strong>Activa GitHub Pages</strong><br>Ve a <strong>Settings → Pages → Source: "Deploy from a branch" → Branch: main → / (root) → Save</strong><br>Espera 2–3 minutos. Tu página estará publicada en:</div>
-    </div>
-    <div class="gh-url">https://[tu-usuario].github.io/phd-math-tracker/</div>
-    <div class="note-box t" style="margin-top:12px"><strong>Para actualizar:</strong> Sube una nueva versión del index.html al mismo repositorio — GitHub Pages se actualiza automáticamente en 1–2 minutos. Puedes compartir ese link con quien quieras.</div>
-  </div>
-</div>
-
 <!-- SEASON DEADLINE BAR -->
 <div class="season-bar">
   <div class="season-title">📂 Apertura de Convocatorias — Las plazas se llenan rápido · Haz clic para ver detalles</div>
@@ -735,7 +690,7 @@ a:hover{text-decoration:underline}
 
 <div class="controls">
   <input class="search" type="text" id="search" placeholder="🔍 Buscar..." oninput="run()">
-  <button class="fb on" onclick="setTier('all',this)">Todas (10)</button>
+  <button class="fb on" onclick="setTier('all',this)">Todas (8)</button>
   <button class="fb" onclick="setTier('s',this)">Safety</button>
   <button class="fb" onclick="setTier('m',this)">Match</button>
   <button class="fb" onclick="setTier('r',this)">Reach</button>
@@ -805,7 +760,8 @@ const UNI = [
     {ic:'📐',n:'GRE Mathematics Subject',d:'NO requerido. Si tienes un score bueno (>650) puede ayudar pero no es necesario.',st:'opt'},
     {ic:'💰',n:'Evidencia financiera',d:'Con TA/RA el programa emite tu I-20 cubriendo funding. Sin TA/RA sí necesitas bank statements.',st:'opt'}
   ],
-  email:'Dear Prof. [Last Name],\n\nI am writing to express my strong interest in pursuing a PhD in Mathematics at The Catholic University of America, starting Fall 2027.\n\nI am currently an F1 student residing in Alexandria, VA — just 4 miles from your campus. I have a GPA of 3.25 in my last 60 credit hours, reflecting a clear and consistent upward academic trajectory.\n\nI am particularly interested in [área de investigación del profesor] and believe CUA\'s program would be an excellent fit for my goals.\n\nCould you please let me know whether you are currently accepting PhD students, and whether Teaching or Research Assistantships are available for international students for Fall 2027?\n\nThank you for your time.\n\n[Tu nombre]\n[Email] | [Teléfono]'
+  admEmail:'math@cua.edu', admContact:'Graduate Program Director, Dept. of Mathematics, CUA',
+  email:'Dear Graduate Admissions Team,\n\nI am writing to express my strong interest in pursuing a PhD in Mathematics at The Catholic University of America, starting Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA — just 4 miles from your campus. My research background is in partial differential equations and mathematical analysis; I completed my undergraduate thesis in PDEs and have three letters of recommendation ready.\n\nI have a GPA of 3.25 in my last 60 credit hours, reflecting a clear and consistent upward academic trajectory, and I am currently preparing my Duolingo score.\n\nI would greatly appreciate information about Teaching or Research Assistantship availability for international students entering Fall 2027.\n\nThank you for your time.\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'howard', name:'Howard University', city:'Washington', state:'DC',
@@ -843,7 +799,8 @@ const UNI = [
     {ic:'🌍',n:'Copia de visa F1 + pasaporte',d:'Para el expediente de admisión internacional.',st:'req'},
     {ic:'🎓',n:'GRE General',d:'NO requerido para ciclo 2025–27. No te preocupes por este.',st:'opt'}
   ],
-  email:'Dear Graduate Admissions Committee,\n\nI am writing to inquire about PhD opportunities in Mathematics at Howard University for Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA (9 miles from campus, Metro accessible), with a strong academic upward trend — GPA of 3.25 over my last 60 credit hours.\n\nI am particularly interested in [área de investigación] and believe Howard\'s collaborative and inclusive environment aligns deeply with my academic goals and background.\n\nCould you please let me know about the availability of Teaching Assistantships or Research Assistantships for international students entering in Fall 2027?\n\nThank you,\n[Tu nombre]\n[Email] | [Teléfono]'
+  admEmail:'gradschool@howard.edu', admContact:'Graduate Admissions, Dept. of Mathematics, Howard University',
+  email:'Dear Graduate Admissions Committee,\n\nI am writing to inquire about PhD opportunities in Mathematics at Howard University for Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA (9 miles from campus, Metro accessible via Green/Yellow Line). My research background is in partial differential equations — my undergraduate thesis focused on PDEs and I have three letters of recommendation ready.\n\nI have a GPA of 3.25 over my last 60 credit hours, reflecting a strong upward academic trend. I am preparing my Duolingo score and can also provide GRE scores.\n\nI believe Howard\'s collaborative and inclusive environment aligns deeply with my academic goals and background.\n\nCould you please let me know about the availability of Teaching Assistantships or Research Assistantships for international students entering Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'gmu', name:'George Mason University', city:'Fairfax', state:'VA',
@@ -887,7 +844,8 @@ const UNI = [
     {ic:'🌍',n:'Copia de visa F1 + pasaporte',d:'Para expediente internacional. El I-20 nuevo lo emite GMU si te admiten con TA/RA.',st:'req'},
     {ic:'💰',n:'Evidencia financiera',d:'NO necesaria si recibes TA/RA. GMU emite tu I-20 basado en el funding del programa.',st:'opt'}
   ],
-  email:'Dear Prof. [Antil / Emelianenko],\n\nI am writing to express strong interest in pursuing a PhD in Applied Mathematics at George Mason University under your supervision, starting Fall 2027.\n\nI have carefully read your work on [investigación específica — cita un paper real] and am particularly drawn to [aspecto específico]. I believe your research aligns very closely with my interests in [tu área].\n\nI am an F1 international student currently living in Alexandria, VA — just 10 miles from GMU\'s Fairfax campus. I have a GPA of 3.25 in my last 60 credit hours, reflecting a clear and sustained upward academic trajectory.\n\nI would very much appreciate knowing whether you are currently accepting PhD students with RA support for Fall 2027.\n\nThank you for your time.\n[Tu nombre]\n[Email] | [LinkedIn / página web si tienes]'
+  admEmail:'gradadmissions@gmu.edu', admContact:'Graduate Admissions, Dept. of Mathematical Sciences, GMU',
+  email:'Dear Graduate Admissions Team,\n\nI am writing to express my strong interest in the PhD program in Applied Mathematics at George Mason University, starting Fall 2027.\n\nI am an F1 international student residing in Alexandria, VA — just 10 miles from GMU\'s Fairfax campus. My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 in my last 60 credit hours (upward trajectory), and I am preparing my Duolingo score as well as GRE Math and GRE General.\n\nVirginia residency and GMU\'s applied mathematics strengths — particularly in numerical PDEs and computational modeling — make this program an especially strong fit.\n\nCould you please provide information about Research Assistantship or Teaching Assistantship availability for international PhD students for Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'american', name:'American University', city:'Washington', state:'DC',
@@ -923,7 +881,8 @@ const UNI = [
     {ic:'📄',n:'CV',d:'Con énfasis en cursos cuantitativos y cualquier experiencia en datos o investigación.',st:'req'},
     {ic:'🌍',n:'Visa F1 + pasaporte',d:'',st:'req'}
   ],
-  email:'Dear Prof. [Last Name],\n\nI am a prospective PhD student interested in your work on [research area] and in the Mathematics & Statistics PhD program at American University, for Fall 2027.\n\nI am an F1 student living nearby in Alexandria, VA, making AU particularly attractive both academically and geographically. I have a GPA of 3.25 in my last 60 credit hours, with particular strength in [cursos específicos].\n\nI am very interested in AU\'s applied mathematics focus and its connections to DC federal agencies. Are you currently accepting PhD students with TA or RA positions for Fall 2027?\n\nThank you,\n[Tu nombre]\n[Email]'
+  admEmail:'math@american.edu', admContact:'Graduate Admissions, Dept. of Mathematics & Statistics, American University',
+  email:'Dear Graduate Admissions Team,\n\nI am a prospective PhD student interested in the Mathematics & Statistics PhD program at American University, for Fall 2027.\n\nI am an F1 international student living in Alexandria, VA — just 8 miles from campus, Metro Red Line accessible. My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 in my last 60 credit hours (clear upward trajectory), and I am preparing Duolingo, GRE Math, and GRE General scores.\n\nI am particularly drawn to AU\'s applied mathematics focus and its connections to DC federal research agencies (NSF, NIH, Census).\n\nAre TA or RA positions available for international PhD students for Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'gwu', name:'George Washington University', city:'Washington', state:'DC',
@@ -959,7 +918,8 @@ const UNI = [
     {ic:'📐',n:'GRE Math Subject',d:'Muy recomendado. Score >650 puede ser decisivo para compensar tu GPA general.',st:'rec'},
     {ic:'🎓',n:'GRE General',d:'Recomendado. Incluye si tienes buen score (Quantitative >160).',st:'rec'}
   ],
-  email:'Dear Prof. [Last Name],\n\nI am writing to express my interest in your research on [tema] and to inquire about PhD opportunities at George Washington University for Fall 2027.\n\nI am an F1 international student living in Alexandria, VA — just 7 miles from GWU\'s Foggy Bottom campus. I have a recent GPA of 3.25 in my last 60 credit hours, reflecting a strong and sustained upward academic trajectory.\n\nI would be very grateful to discuss whether you are currently accepting PhD students with Teaching Assistantship support for Fall 2027.\n\nThank you,\n[Tu nombre]\n[Email]'
+  admEmail:'math@gwu.edu', admContact:'Graduate Admissions, Dept. of Mathematics, George Washington University',
+  email:'Dear Graduate Admissions Team,\n\nI am writing to inquire about PhD opportunities in Mathematics at George Washington University for Fall 2027.\n\nI am an F1 international student living in Alexandria, VA (7 miles from GWU\'s Foggy Bottom campus, Metro Blue/Yellow Line). My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 in my last 60 credit hours and I am preparing Duolingo (≥120), GRE Math (>650), and GRE General scores.\n\nI would greatly appreciate information about Teaching Assistantship availability and the application process for international students.\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'umbc', name:'Univ. of Maryland Baltimore County', city:'Baltimore County', state:'MD',
@@ -995,7 +955,8 @@ const UNI = [
     {ic:'📄',n:'CV',d:'Con énfasis en cursos cuantitativos.',st:'req'},
     {ic:'🌍',n:'Visa F1 + pasaporte',d:'',st:'req'}
   ],
-  email:'Dear Prof. [Last Name],\n\nI am writing to inquire about PhD opportunities in Mathematics & Statistics at UMBC for Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA (about 30 miles away), with a GPA of 3.25 in my last 60 credit hours and a clear upward academic trajectory.\n\nI am particularly interested in [área de investigación]. Could you please let me know about TA or RA availability for international students?\n\nThank you,\n[Tu nombre]'
+  admEmail:'mathstat@umbc.edu', admContact:'Graduate Program Coordinator, Dept. of Mathematics & Statistics, UMBC',
+  email:'Dear Graduate Program Coordinator,\n\nI am writing to inquire about PhD opportunities in Mathematics & Statistics at UMBC for Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA (approximately 30 miles from UMBC). My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 in my last 60 credit hours (clear upward trajectory), and I am preparing Duolingo, GRE Math, and GRE General scores.\n\nI am particularly interested in UMBC\'s applied analysis and mathematical biology programs. Could you please let me know about TA or RA availability for international PhD students for Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'umd', name:'University of Maryland, College Park', city:'College Park', state:'MD',
@@ -1034,7 +995,8 @@ const UNI = [
     {ic:'🎓',n:'GRE General',d:'Recomendado. Quantitative >165 ayuda.',st:'rec'},
     {ic:'📋',n:'Writing Sample matemático',d:'Cualquier trabajo de math que hayas escrito — proyecto de clase, paper, tesis.',st:'opt'}
   ],
-  email:'Dear Prof. [Last Name],\n\nI am writing because your research on [tema específico — cita un paper real] is directly aligned with my mathematical interests, particularly in [aspecto específico].\n\nI am planning to apply to the PhD program in Mathematics at UMD for Fall 2027. I am an F1 international student based in Alexandria, VA (12 miles from College Park), with a GPA of 3.25 in my last 60 credit hours — reflecting an upward trajectory that I am proud of and would like to continue in a research environment.\n\nI would be very grateful for the opportunity to discuss your current research and whether you are accepting PhD students with RA support for Fall 2027.\n\nSincerely,\n[Tu nombre]\n[Email] | [Teléfono]'
+  admEmail:'math-gradoffice@umd.edu', admContact:'Graduate Admissions Office, Dept. of Mathematics, University of Maryland',
+  email:'Dear Graduate Admissions Team,\n\nI am writing to inquire about the PhD program in Mathematics at the University of Maryland, College Park for Fall 2027.\n\nI am an F1 international student based in Alexandria, VA (12 miles from College Park, Metro Green Line). My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 in my last 60 credit hours (upward trajectory), and I am preparing Duolingo (≥125), GRE Math (>700), and GRE General (Quantitative ≥165).\n\nI am particularly interested in UMD\'s strengths in hyperbolic PDEs and numerical analysis, and I have identified faculty whose research aligns with my background.\n\nCould you please provide guidance on the application process and Research/Teaching Assistantship availability for international students?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
   id:'morgan', name:'Morgan State University', city:'Baltimore', state:'MD',
@@ -1068,126 +1030,88 @@ const UNI = [
     {ic:'✉️',n:'3 Cartas de Recomendación',d:'',st:'req'},
     {ic:'📄',n:'CV',d:'',st:'req'}
   ],
-  email:'Dear Graduate Admissions,\n\nI am applying to the PhD program in Mathematics at Morgan State University for Fall 2027.\n\nI am an F1 international student currently living in Alexandria, VA (about 35 miles from Baltimore). I have a GPA of 3.25 over my last 60 credit hours, reflecting a strong academic upward trajectory.\n\nI would appreciate information about Teaching Assistantship availability for international PhD students.\n\nThank you,\n[Tu nombre]'
-},
-{
-  id:'georgetown', name:'Georgetown University', city:'Washington', state:'DC',
-  program:'PhD Mathematics', tier:'r', priority:9, near:true, ra:false,
-  dist:'9 mi · 15–20 min · Metro Blue/Orange/Silver', match:30,
-  gpaMin:null, gpaAvg:'3.7–3.9', stipend:'~$28,000', waiver:true,
-  ranking:'Top 40 Nacional', cohort:'4–6', duration:'5 años',
-  deadline:'1 Dic 2026', deadlineOpen:'Ago 2026', deadlineType:'hot',
-  toefl:125, gre:'Recomendado', greSubj:'Muy recomendado', acceptRate:'~5–10%',
-  fund:['RA'],
-  stats:{rate:'~5–10%', apps:'~80–120', admitted:'~5–10', minGPA:'No publicado; ~3.6+ típico', source:'GradCafe.com (pocos reportes — programa pequeño) + Georgetown Grad Bulletin'},
-  pros:['9 mi de tu casa — ubicación ideal','RA disponible = investigación pura','Programa muy selectivo = atención muy personalizada','Prestigio Georgetown — abre puertas para academia','Stipend más alto que los safety ($28k)'],
-  strategy:'"Lottery ticket" local. A 15 minutos de tu casa. Tu GPA está debajo del promedio pero si tienes: cartas de investigadores activos + GRE Math >720 + SOP excepcional + un profesor que te conozca = hay posibilidad real. Vale la pena los $50 de fee. DEADLINE 1 DIC — el más pronto de toda tu lista.',
-  areas:['Geometría Algebraica','Topología Algebraica','Análisis Armónico','Álgebra Abstracta','Teoría de Números'],
-  courses:{
-    'Año 1':['Real Analysis I–II','Abstract Algebra I–II','Algebraic Geometry','Topology I'],
-    'Año 2':['Advanced Seminars','Research Rotation','Electivos de especialización'],
-    'Año 3–5':['Qualifying Exams','Tesis Doctoral']
-  },
-  timeline:[
-    {m:'Jun 2026',st:'now',a:'URGENTE: Duolingo ≥ 125 + GRE Math',d:'Georgetown tiene los requisitos más altos del área. Ambos tests son prioritarios — empieza YA.'},
-    {m:'Jun–Jul 2026',st:'now',a:'Contacta un profesor en Georgetown ESTA SEMANA',d:'Sin un profesor que te conozca y apoye, la admisión es extremadamente difícil. Lee sus papers y escribe un email muy personalizado.'},
-    {m:'Ago 2026',st:'future',a:'Convocatoria abre',d:'Aplica apenas abra la convocatoria — el proceso es competitivo.'},
-    {m:'Ago–Sep 2026',st:'future',a:'SOP + cartas de investigadores',d:'Necesitas cartas de personas con doctorado y publicaciones activas. No solo profesores de clase.'},
-    {m:'Oct–Nov 2026',st:'future',a:'Finaliza GRE Math + todos documentos',d:'GRE Math en octubre. Score >720 es casi necesario.'},
-    {m:'1 Dic 2026',st:'urgent',a:'DEADLINE — ¡EL MÁS PRONTO DE TODA TU LISTA!',d:'Este es el deadline más cercano de todos. ¡Prioridad máxima ahora mismo!'}
-  ],
-  docs:[
-    {ic:'📝',n:'Statement of Purpose',d:'Muy detallado. Menciona investigación específica de Georgetown. Por qué este programa, por qué este profesor. No genérico.',st:'req'},
-    {ic:'📊',n:'Transcripts',d:'Todas las instituciones. Traducción certificada.',st:'req'},
-    {ic:'🌐',n:'Duolingo ≥ 125',d:'El más alto de tu lista junto con UMD.',st:'req'},
-    {ic:'✉️',n:'3 Cartas fuertes de investigadores',d:'Idealmente de personas con publicaciones activas que puedan hablar de tu potencial investigativo.',st:'req'},
-    {ic:'📄',n:'CV + Writing Sample matemático',d:'Cualquier trabajo matemático que hayas escrito — proyecto de clase extendido, paper, tesis.',st:'req'},
-    {ic:'📐',n:'GRE Mathematics Subject',d:'>720 es casi necesario para compensar el GPA. Prioridad alta.',st:'rec'}
-  ],
-  email:'Dear Prof. [Last Name],\n\nYour work on [tema específico — cita exacta de un paper] is directly related to questions I have been exploring in [área].\n\nI am planning to apply to Georgetown\'s Mathematics PhD program for Fall 2027. As an F1 student living in Alexandria (9 miles from campus), I am particularly excited about [aspecto específico del programa o investigación del profesor].\n\nI would greatly appreciate the opportunity to discuss your research and any current openings for PhD students for Fall 2027.\n\nSincerely,\n[Tu nombre]\n[Email]'
-},
-{
-  id:'jhu', name:'Johns Hopkins University', city:'Baltimore', state:'MD',
-  program:'PhD Mathematics', tier:'r', priority:10, near:true, ra:false,
-  dist:'35 mi · 45 min en carro / MARC Train', match:22,
-  gpaMin:null, gpaAvg:'3.8–4.0', stipend:'$32,000+', waiver:true,
-  ranking:'Top 15 Nacional', cohort:'8–10', duration:'5 años',
-  deadline:'15 Dic 2026', deadlineOpen:'Sep 2026', deadlineType:'hot',
-  toefl:125, gre:'Recomendado', greSubj:'Casi obligatorio', acceptRate:'~5–8%',
-  fund:['RA'],
-  stats:{rate:'~5–8%', apps:'~200–300', admitted:'~12–20', minGPA:'No publicado; ~3.7+ típico', source:'GradCafe.com (JHU Mathematics PhD — muchos reportes) + AMS Annual Survey + JHU Grad Catalog'},
-  pros:['35 mi de Alexandria · MARC Train disponible','$32k+ stipend — el más alto de toda la lista','Top 15 Nacional — el más prestigioso del área','Full funding garantizado para todos los admitidos','RA = investigación pura desde año 1'],
-  strategy:'Muy competitivo. Aplica si tienes investigación previa demostrable o un profesor en JHU que te conoce. Vale intentarlo como aspiración máxima — a 45 min de tu casa. Sin GRE Math >780 y Duolingo 125, no tiene mucho sentido aplicar. Pero si tienes esos números, un SOP excepcional puede abrir la puerta.',
-  areas:['Geometría Algebraica','Topología Diferencial','Análisis Armónico','Álgebra Moderna','Teoría de Números Analítica','Geometría Diferencial'],
-  courses:{
-    'Año 1':['Real Analysis Avanzado','Algebra Moderna','Algebraic Topology','Complex Geometry'],
-    'Año 2':['Seminarios avanzados + Research Rotation'],
-    'Año 3–5':['Qualifying Exams (muy difíciles)','Tesis Doctoral']
-  },
-  timeline:[
-    {m:'Jun 2026',st:'now',a:'URGENTE: Duolingo 125 + GRE Math apuntando a 780+',d:'Sin estos scores, JHU no tiene sentido. Si los tienes, procede con confianza.'},
-    {m:'Jun–Jul 2026',st:'now',a:'Contacta profesores en JHU AHORA',d:'JHU admite principalmente por relación profesor-estudiante. Lee sus papers. Cita trabajo específico en tu email.'},
-    {m:'Sep 2026',st:'future',a:'Convocatoria abre',d:''},
-    {m:'Oct–Nov 2026',st:'future',a:'SOP excelente + cartas de investigadores activos',d:'Necesitas cartas de personas que publican activamente en tu área. La más importante de tu aplicación.'},
-    {m:'15 Dic 2026',st:'urgent',a:'DEADLINE',d:'Mismo mes que UMD — gestiona ambas simultáneamente.'}
-  ],
-  docs:[
-    {ic:'📝',n:'Statement of Purpose',d:'Debe mencionar investigación específica de JHU, por qué eres candidato único y cómo tus intereses encajan con profesores específicos.',st:'req'},
-    {ic:'📊',n:'Transcripts',d:'Todas las instituciones.',st:'req'},
-    {ic:'🌐',n:'Duolingo ≥ 125',d:'El más alto junto con Georgetown.',st:'req'},
-    {ic:'✉️',n:'3 Cartas de investigadores activos',d:'Lo más importante de tu aplicación en JHU. Cartas de personas que publican en tu área.',st:'req'},
-    {ic:'📐',n:'GRE Math Subject',d:'>780. Casi obligatorio para JHU.',st:'req'},
-    {ic:'📋',n:'Writing Sample / Paper matemático',d:'Si tienes cualquier trabajo matemático publicado o presentado en conferencia, inclúyelo.',st:'rec'}
-  ],
-  email:'Dear Prof. [Last Name],\n\nI have read your papers on [tema] with great interest, particularly [resultado específico de un paper concreto].\n\nI am exploring PhD opportunities at Johns Hopkins for Fall 2027. I am an F1 student near Baltimore (Alexandria, VA, ~35 miles) with an upward academic trajectory and deep interest in [tu área específica].\n\nWould you be open to discussing potential PhD supervision and the program\'s admissions process?\n\n[Tu nombre]\n[Email]'
+  admEmail:'graduateschool@morgan.edu', admContact:'Graduate School, Morgan State University',
+  email:'Dear Graduate Admissions Team,\n\nI am writing to apply to the PhD program in Mathematics at Morgan State University for Fall 2027.\n\nI am an F1 international student currently living in Alexandria, VA (approximately 35 miles from Baltimore). My undergraduate thesis focused on partial differential equations, and I have three letters of recommendation ready. I have a GPA of 3.25 over my last 60 credit hours (strong upward trajectory), and I am preparing my Duolingo score.\n\nI would appreciate information about Teaching Assistantship availability for international PhD students and any guidance on the application process.\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 }
 ];
 
-// ---- PROFESORES POR ÁREA (EDs & Análisis) ----
+// ---- PROFESORES POR ÁREA (EDs & Análisis) — con emails completos ----
 const PROFS = {
   gmu:[
-    {name:'Dr. Harbir Antil', area:'EDPs & Control Óptimo', rel:'Alto', note:'Especialista en control óptimo de ecuaciones en derivadas parciales. Análisis numérico y optimización de sistemas gobernados por EDPs — directamente alineado con EDs aplicadas. Cita su trabajo en control de fluidos o ecuaciones de obstáculo.'},
-    {name:'Dr. Evelyn Sander', area:'Sistemas Dinámicos & EDOs', rel:'Alto', note:'Investigación en bifurcaciones, caos y sistemas dinámicos no lineales. Muy conectado con la teoría de ecuaciones diferenciales ordinarias. Contacto ideal si tu tesis fue en EDOs o sistemas dinámicos.'},
-    {name:'Dr. Padmanabhan Seshaiyer', area:'EDPs & Métodos Numéricos', rel:'Alto', note:'Análisis numérico de EDPs y métodos de elementos finitos. Aplicaciones en biomecánica e ingeniería — alineado con ecuaciones diferenciales aplicadas.'},
-    {name:'Dr. Maria Emelianenko', area:'Matemática Computacional', rel:'Medio', note:'Dinámica de materiales y modelos matemáticos computacionales. Trabaja con sistemas de EDOs/EDPs en aplicaciones de física de materiales.'}
-  ],
-  georgetown:[
-    {name:'Verificar en math.georgetown.edu', area:'Análisis Geométrico / Armónico', rel:'Ver web', note:'Georgetown se enfoca en matemática pura (álgebra, topología, números). Para tu perfil en EDs, busca profesores en análisis armónico o análisis geométrico en el directorio de facultad del departamento.'}
+    {name:'Dr. Harbir Antil', area:'EDPs & Control Óptimo', rel:'Alto',
+     note:'Especialista en control óptimo de ecuaciones en derivadas parciales. Análisis numérico y optimización de sistemas gobernados por EDPs — directamente alineado con tu tesis en EDPs.',
+     profEmail:'hantil@gmu.edu',
+     emailBody:'Dear Dr. Antil,\n\nI am writing to express my strong interest in pursuing a PhD in Applied Mathematics at George Mason University under your supervision, starting Fall 2027.\n\nI have studied your paper "A FEM for an Optimal Control Problem of Fractional Powers of Elliptic Operators" and am drawn to your approach to extending optimal control to fractional and nonlocal PDE settings. My undergraduate thesis focused on partial differential equations, and your research on PDE-constrained optimization represents exactly the direction I wish to pursue at the doctoral level.\n\nI am an F1 international student currently living in Alexandria, VA — just 10 miles from GMU\'s Fairfax campus. I have a GPA of 3.25 in my last 60 credit hours (clear upward trajectory), three letters of recommendation ready, and I am preparing GRE Math, GRE General, and Duolingo scores.\n\nI would very much appreciate knowing whether you are currently accepting PhD students with Research Assistantship support for Fall 2027.\n\nThank you for your time.\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Evelyn Sander', area:'Sistemas Dinámicos & EDOs', rel:'Alto',
+     note:'Investigación en bifurcaciones, caos y sistemas dinámicos no lineales. Muy conectado con la teoría de EDOs y análisis cualitativo de sistemas dinámicos.',
+     profEmail:'esander@gmu.edu',
+     emailBody:'Dear Dr. Sander,\n\nI am writing because your research on bifurcation theory and computational dynamics is closely aligned with my background in differential equations. My undergraduate thesis focused on PDEs, and your work on the qualitative behavior of nonlinear dynamical systems is the natural next direction I want to pursue.\n\nI am applying to the PhD program in Applied Mathematics at George Mason University for Fall 2027. I am an F1 international student residing in Alexandria, VA (10 miles from campus), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation ready, and I am preparing GRE and Duolingo scores.\n\nCould you please let me know whether you are currently accepting new PhD students and whether Research Assistantship positions are available for international students for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Padmanabhan Seshaiyer', area:'EDPs & Métodos Numéricos', rel:'Alto',
+     note:'Análisis numérico de EDPs y métodos de elementos finitos. Aplicaciones en biomecánica e ingeniería — directamente alineado con tu tesis en EDPs.',
+     profEmail:'pseshaiy@gmu.edu',
+     emailBody:'Dear Dr. Seshaiyer,\n\nI am writing to express my interest in your research on numerical methods for PDEs and their applications in biomedical engineering. Your work connecting rigorous finite element analysis with real-world applications is exactly the direction I hope to pursue in my doctoral studies.\n\nI completed my undergraduate thesis on partial differential equations, and I am applying to GMU\'s Applied Mathematics PhD program for Fall 2027. I am an F1 student in Alexandria, VA (10 miles from GMU), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation, and I am preparing GRE Math, GRE General, and Duolingo scores.\n\nAre you currently accepting PhD students with Research Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Maria Emelianenko', area:'Matemática Computacional', rel:'Medio',
+     note:'Dinámica de materiales y modelos matemáticos computacionales. Trabaja con sistemas de EDOs/EDPs en aplicaciones de física de materiales.',
+     profEmail:'memelian@gmu.edu',
+     emailBody:'Dear Dr. Emelianenko,\n\nI am writing to express my interest in your research on mathematical modeling of materials and computational methods for complex dynamical systems. The mathematical framework you apply to energy-driven systems connects naturally with my background in differential equations.\n\nI am applying to the PhD program in Applied Mathematics at GMU for Fall 2027. I am an F1 student in Alexandria, VA (10 miles from campus), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation, and I am preparing GRE and Duolingo scores.\n\nCould you please let me know whether you are accepting new PhD students with Research Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'}
   ],
   american:[
-    {name:'Verificar en american.edu/cas/math', area:'Matemática Aplicada / Análisis', rel:'Ver web', note:'AU tiene PhD en Math & Statistics con enfoque aplicado y conexiones con agencias federales (NSF, NIH). Revisa el directorio del departamento para profesores en análisis o ecuaciones diferenciales.'}
+    {name:'Verificar en american.edu/cas/math', area:'Matemática Aplicada / Análisis', rel:'Ver web',
+     note:'AU tiene PhD en Math & Statistics con enfoque aplicado y conexiones con agencias federales (NSF, NIH). Revisa el directorio del departamento para profesores en análisis o ecuaciones diferenciales.'}
   ],
   umd:[
-    {name:'Dr. Eitan Tadmor', area:'EDPs Hiperbólicas & Métodos Numéricos', rel:'Alto', note:'Uno de los expertos mundiales en EDPs hiperbólicas, leyes de conservación y dinámica de fluidos. Contacto #1 en UMD si tu tesis involucró EDPs. Cita su trabajo en leyes de conservación o dinámica de partículas.'},
-    {name:'Dr. Pierre-Emmanuel Jabin', area:'EDPs & Ecuaciones Cinéticas', rel:'Alto', note:'Trabaja en ecuaciones cinéticas (tipo Boltzmann/Vlasov) y EDPs no lineales. Investigación en existencia y regularidad de soluciones — análisis puro avanzado.'},
-    {name:'Dr. Dionisios Margetis', area:'Matemática Aplicada & Asintóticas', rel:'Medio', note:'Asintóticas y EDPs con aplicaciones en física y nanotecnología. Matemática aplicada con alto rigor analítico.'},
-    {name:'Dr. Kasso Okoudjou', area:'Análisis Armónico & Análisis de Fourier', rel:'Medio', note:'Análisis de Fourier, marcos (frames) y análisis tiempo-frecuencia. Relacionado con análisis funcional y análisis aplicado.'}
-  ],
-  jhu:[
-    {name:'Dr. Christopher Sogge', area:'EDPs & Análisis Armónico', rel:'Alto', note:'Experto mundial en EDPs y análisis armónico — estimaciones espectrales y propagación de ondas. Muy relevante si tu tesis incluyó análisis o EDPs. Referencia: su libro "Fourier Integrals in Classical Analysis".'},
-    {name:'Dr. Hans Lindblad', area:'EDPs Hiperbólicas (Relatividad General)', rel:'Medio', note:'EDPs no lineales hiperbólicas en el contexto de la relatividad general matemática. Alto nivel de abstracción requerido.'},
-    {name:'Dr. Joel Spruck', area:'EDPs Elípticas & Geometría', rel:'Medio', note:'EDPs elípticas completamente no lineales y geometría diferencial. Ecuaciones de Monge-Ampère y curvatura prescrita.'}
+    {name:'Dr. Eitan Tadmor', area:'EDPs Hiperbólicas & Métodos Numéricos', rel:'Alto',
+     note:'Uno de los expertos mundiales en EDPs hiperbólicas, leyes de conservación y dinámica de fluidos. Contacto #1 en UMD para tu tesis en EDPs.',
+     profEmail:'tadmor@umd.edu',
+     emailBody:'Dear Dr. Tadmor,\n\nI am writing because your work on hyperbolic conservation laws — particularly the entropy stability framework developed in your paper "Entropy Stability Theory for Difference Approximations of Nonlinear Conservation Laws" — is directly aligned with my research in differential equations.\n\nMy undergraduate thesis focused on partial differential equations, and your spectral viscosity methods and analysis of conservation laws represent the research direction I most want to continue at the doctoral level.\n\nI am an F1 international student based in Alexandria, VA (12 miles from College Park, Metro Green Line), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation ready, and I am preparing Duolingo (≥125), GRE Math (>700), and GRE General scores.\n\nI would be very grateful for the opportunity to discuss your current research and whether you are accepting PhD students with Research Assistantship support for Fall 2027.\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Pierre-Emmanuel Jabin', area:'EDPs & Ecuaciones Cinéticas', rel:'Alto',
+     note:'Trabaja en ecuaciones cinéticas (tipo Boltzmann/Vlasov) y EDPs no lineales. Investigación en existencia y regularidad de soluciones.',
+     profEmail:'pjabin@umd.edu',
+     emailBody:'Dear Dr. Jabin,\n\nI am writing because your research on mean-field limits and kinetic equations — particularly your quantitative estimates for particle systems approaching Vlasov-type PDEs — connects closely with my interest in the analysis of differential equations.\n\nI completed my undergraduate thesis on PDEs and am applying to UMD\'s Mathematics PhD program for Fall 2027. I am an F1 student in Alexandria, VA (12 miles from College Park), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation, and I am preparing Duolingo (≥125), GRE Math (>700), and GRE General scores.\n\nAre you currently accepting PhD students with Research Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Dionisios Margetis', area:'Matemática Aplicada & Asintóticas', rel:'Medio',
+     note:'Asintóticas y EDPs con aplicaciones en física y nanotecnología. Matemática aplicada con alto rigor analítico.',
+     profEmail:'dio@math.umd.edu',
+     emailBody:'Dear Dr. Margetis,\n\nI am writing to express my interest in your research on asymptotic methods and applied mathematics — particularly your PDE models in materials science and nanotechnology. The combination of rigorous asymptotic analysis with physical applications is the approach I hope to pursue at the doctoral level.\n\nMy undergraduate thesis focused on partial differential equations. I am applying to UMD\'s PhD program for Fall 2027 as an F1 student in Alexandria, VA (12 miles from College Park), with a GPA of 3.25 in my last 60 credit hours and three letters of recommendation.\n\nAre you accepting PhD students with Research Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Dr. Kasso Okoudjou', area:'Análisis Armónico & Análisis de Fourier', rel:'Medio',
+     note:'Análisis de Fourier, marcos (frames) y análisis tiempo-frecuencia. Relacionado con análisis funcional y análisis aplicado.',
+     profEmail:'kasso@math.umd.edu',
+     emailBody:'Dear Dr. Okoudjou,\n\nI am writing because your research on time-frequency analysis and frames connects with my background in analysis and differential equations. Your approach to applied harmonic analysis is a direction I am very interested in exploring at the doctoral level.\n\nI am applying to UMD\'s Mathematics PhD program for Fall 2027. I am an F1 student in Alexandria, VA (12 miles from College Park), with a GPA of 3.25 in my last 60 credit hours and three letters of recommendation ready.\n\nCould you please let me know whether you are accepting PhD students with Research Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'}
   ],
   howard:[
-    {name:'Dr. Bourama Toni', area:'Sistemas Dinámicos & Ecuaciones Diferenciales', rel:'Alto', note:'Especialista en sistemas dinámicos, ecuaciones diferenciales y biomatemática. Contacto clave en Howard para estudiantes con tesis en EDs. Muy accesible para estudiantes internacionales.'},
-    {name:'Verificar en howard.edu/cnas/math', area:'Análisis & Matemática Aplicada', rel:'Ver web', note:'Howard tiene un programa amplio e inclusivo. Revisa el directorio del departamento para más profesores en análisis real, EDs o matemática aplicada.'}
+    {name:'Dr. Bourama Toni', area:'Sistemas Dinámicos & Ecuaciones Diferenciales', rel:'Alto',
+     note:'Especialista en sistemas dinámicos, ecuaciones diferenciales y biomatemática. Contacto clave en Howard para estudiantes con tesis en EDPs. Muy accesible para estudiantes internacionales.',
+     profEmail:'bourama.toni@howard.edu',
+     emailBody:'Dear Dr. Toni,\n\nI am writing because your work on dynamical systems and differential equations — particularly your research on structural stability and biomathematical modeling — aligns closely with my background. My undergraduate thesis focused on partial differential equations, and the qualitative analysis of dynamical systems you develop is the direction I want to continue.\n\nI am applying to Howard University\'s PhD program in Mathematics for Fall 2027. I am an F1 international student currently living in Alexandria, VA (9 miles from campus, Metro accessible). I have a GPA of 3.25 in my last 60 credit hours, three letters of recommendation ready, and I am preparing Duolingo and GRE scores.\n\nI would be very grateful to know whether you are currently accepting new PhD students and whether Research Assistantship positions are available for Fall 2027.\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Verificar en howard.edu/cnas/math', area:'Análisis & Matemática Aplicada', rel:'Ver web',
+     note:'Howard tiene un programa amplio e inclusivo. Revisa el directorio del departamento para más profesores en análisis real, EDPs o matemática aplicada.'}
   ],
   gwu:[
-    {name:'Dr. Maria Gualdani', area:'EDPs No Lineales & Ecuación de Boltzmann', rel:'Alto', note:'Investiga ecuaciones cinéticas y EDPs no lineales con aplicaciones en física de plasmas y dinámica de partículas — directamente relacionado con análisis y EDs avanzadas.'},
-    {name:'Verificar en math.gwu.edu', area:'Análisis & EDPs', rel:'Ver web', note:'Verifica en el directorio del departamento para profesores activos en análisis funcional o ecuaciones diferenciales.'}
+    {name:'Dr. Maria Gualdani', area:'EDPs No Lineales & Ecuación de Boltzmann', rel:'Alto',
+     note:'Investiga ecuaciones cinéticas y EDPs no lineales — directamente relacionado con tu tesis en EDPs. Trabaja en regularidad de la ecuación de Boltzmann.',
+     profEmail:'gualdani@gwu.edu',
+     emailBody:'Dear Dr. Gualdani,\n\nI am writing to express my interest in your research on nonlinear kinetic equations, particularly your work on regularity and long-time behavior of solutions to the Boltzmann and Landau equations. This connects directly with my undergraduate thesis on partial differential equations and my interest in nonlinear analysis.\n\nI am applying to GWU\'s PhD program in Mathematics for Fall 2027. I am an F1 international student living in Alexandria, VA (7 miles from GWU\'s campus), with a GPA of 3.25 in my last 60 credit hours, three letters of recommendation, and I am preparing Duolingo (≥120) and GRE Math (>650) scores.\n\nAre you currently accepting PhD students with Teaching Assistantship support for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Verificar en math.gwu.edu', area:'Análisis & EDPs', rel:'Ver web',
+     note:'Verifica en el directorio del departamento para profesores activos en análisis funcional o ecuaciones diferenciales.'}
   ],
   cua:[
-    {name:'Verificar en math.cua.edu', area:'EDs & Análisis', rel:'Ver web', note:'CUA tiene un programa pequeño y personalizado. Contacta directamente al Director de Posgrado de Matemáticas — el equipo es accesible y puede orientarte sobre profesores disponibles en tu área.'}
+    {name:'Verificar en math.cua.edu', area:'EDs & Análisis', rel:'Ver web',
+     note:'CUA tiene un programa pequeño y personalizado. Contacta directamente al Director de Posgrado de Matemáticas — el equipo es muy accesible y puede orientarte sobre profesores disponibles en tu área.'}
   ],
   umbc:[
-    {name:'Dr. Jonathan Bell', area:'Biomatemática & EDPs (Reacción-Difusión)', rel:'Medio', note:'Modelos matemáticos en biología usando EDPs y sistemas de reacción-difusión — conexión directa con ecuaciones diferenciales aplicadas.'},
-    {name:'Verificar en math.umbc.edu', area:'Análisis Aplicado & Estadística', rel:'Ver web', note:'UMBC es fuerte en estadística matemática y análisis aplicado. Revisa el departamento para más opciones en EDs o análisis.'}
+    {name:'Dr. Jonathan Bell', area:'Biomatemática & EDPs (Reacción-Difusión)', rel:'Medio',
+     note:'Modelos matemáticos en biología usando EDPs y sistemas de reacción-difusión — conexión directa con tu tesis en EDPs.',
+     profEmail:'jbell@umbc.edu',
+     emailBody:'Dear Dr. Bell,\n\nI am writing because your work on reaction-diffusion equations and mathematical biology — particularly your PDE models for nerve impulse propagation using Fitzhugh-Nagumo type systems — resonates strongly with my background in differential equations.\n\nMy undergraduate thesis focused on partial differential equations, and the connection you draw between PDE theory and biological pattern formation is exactly the kind of applied analysis I want to continue. I am applying to UMBC\'s PhD program in Mathematics & Statistics for Fall 2027. I am an F1 student in Alexandria, VA (approximately 30 miles from UMBC), with a GPA of 3.25 in my last 60 credit hours and three letters of recommendation ready.\n\nCould you please let me know whether you are accepting new PhD students and whether Research Assistantship positions are available for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'},
+    {name:'Verificar en math.umbc.edu', area:'Análisis Aplicado & Estadística', rel:'Ver web',
+     note:'UMBC es fuerte en estadística matemática y análisis aplicado. Revisa el departamento para más opciones en EDPs o análisis.'}
   ],
   morgan:[
-    {name:'Verificar en morgan.edu/academics', area:'EDs & Análisis', rel:'Ver web', note:'Morgan State tiene un programa pequeño e inclusivo (HBCU). Contacta directamente al Graduate Coordinator — el equipo es muy accesible y puede guiarte sobre investigación disponible en tu área.'}
+    {name:'Verificar en morgan.edu/academics', area:'EDs & Análisis', rel:'Ver web',
+     note:'Morgan State tiene un programa pequeño e inclusivo (HBCU). Contacta directamente al Graduate Coordinator — el equipo es muy accesible y puede guiarte sobre investigación disponible en tu área.'}
   ]
 };
 UNI.forEach(u => u.profs = PROFS[u.id] || []);
+
 
 // Ordenar tarjetas: primero por fecha de apertura de convocatoria, luego por deadline
 const _esM={Ene:1,Feb:2,Mar:3,Abr:4,May:5,Jun:6,Jul:7,Ago:8,Sep:9,Oct:10,Nov:11,Dic:12};
@@ -1492,46 +1416,87 @@ function tabCourses(u){
   </div>
 </div>`; }
 
-function tabEmail(u){ return `
+function gmailUrl(to,sub,body){
+  return 'https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+}
+
+function tabEmail(u){
+  const admSubj='PhD Mathematics — Inquiry Fall 2027 | Jefferson Pinzon (F1, Alexandria VA)';
+  const admUrl = gmailUrl(u.admEmail||'', admSubj, u.email||'');
+  const namedProfs = (u.profs||[]).filter(p=>p.profEmail);
+  return `
 <div class="tab-content">
   <div class="note-box gold" style="margin-bottom:14px">
-    <strong>¿Cuándo enviar?</strong> Julio–Agosto 2026 es ideal. Los profesores están menos ocupados y pueden responderte antes del semestre de otoño.
+    <strong>¿Cuándo enviar?</strong> Julio–Agosto 2026 es ideal — los profesores están menos ocupados antes del semestre de otoño. Tus cartas ya están listas y tu tesis en EDPs es tu argumento más fuerte.
   </div>
-  <div class="sh">Email sugerido para contactar profesores</div>
-  <div class="email-box" id="email-${u.id}">${u.email}</div>
-  <button class="copy-btn" onclick="copyEmail('${u.id}')">📋 Copiar email</button>
-  <div class="sh" style="margin-top:20px">5 reglas de oro para el email</div>
-  <div class="note-box">1. <strong>Cita un paper ESPECÍFICO del profesor</strong> — demuestra que lo leíste de verdad. No digas "your work is interesting", di "your result in [paper 2023] on [resultado concreto]".</div>
-  <div class="note-box">2. <strong>Menciona tu GPA reciente 3.25</strong> y la tendencia positiva explícitamente. No dejes que el comité vea solo el 2.99.</div>
-  <div class="note-box">3. <strong>Pregunta directamente</strong> si tiene plazas con TA o RA para Fall 2027. No sea ambiguo.</div>
-  <div class="note-box">4. <strong>Máximo 200 palabras</strong> — los profesores reciben decenas de emails. El tuyo debe ser claro y directo.</div>
-  <div class="note-box">5. <strong>Follow-up a las 2 semanas</strong> si no responden — es completamente normal y aceptable en academia.</div>
+
+  <div class="sh">1. Email de Admisiones del Programa</div>
+  <div class="email-header">
+    <span class="eh-lbl">Para: </span><span class="eh-name">${u.admContact||'Graduate Admissions'}</span><br>
+    <span class="eh-lbl">Email: </span><a href="mailto:${u.admEmail||''}" class="eh-addr">${u.admEmail||'Ver sitio web del programa'}</a>
+  </div>
+  <div class="email-box" id="email-adm-${u.id}">${u.email||''}</div>
+  <div class="btn-row">
+    <a href="${admUrl}" target="_blank" class="gmail-btn">✉️ Abrir en Gmail</a>
+    <button class="copy-btn" onclick="copyEmailText('email-adm-${u.id}',this)">📋 Copiar texto</button>
+  </div>
+
+  ${namedProfs.length?`
+  <div class="sh" style="margin-top:24px">2. Emails a Profesores</div>
+  ${namedProfs.map((p,i)=>{
+    const pSubj='PhD Inquiry — Differential Equations & Analysis | Fall 2027 | Jefferson Pinzon';
+    const pUrl=gmailUrl(p.profEmail,pSubj,p.emailBody||'');
+    return `<div class="email-header" style="margin-top:${i>0?'16px':'0'}">
+    <span class="eh-lbl">Para: </span><span class="eh-name">${p.name}</span><br>
+    <span class="eh-lbl">Área: </span>${p.area}<br>
+    <span class="eh-lbl">Email: </span><a href="mailto:${p.profEmail}" class="eh-addr">${p.profEmail}</a>
+  </div>
+  <div class="email-box" id="email-prof-${u.id}-${i}">${p.emailBody||''}</div>
+  <div class="btn-row">
+    <a href="${pUrl}" target="_blank" class="gmail-btn b">✉️ Abrir en Gmail</a>
+    <button class="copy-btn" onclick="copyEmailText('email-prof-${u.id}-${i}',this)">📋 Copiar texto</button>
+  </div>`;}).join('')}` : ''}
+
+  <div class="sh" style="margin-top:24px">Reglas de oro</div>
+  <div class="note-box">1. <strong>Cita un paper ESPECÍFICO del profesor</strong> — demuestra que lo leíste de verdad. El texto ya tiene la referencia — no la cambies.</div>
+  <div class="note-box">2. <strong>Tu tesis en EDPs es tu argumento #1.</strong> Ya está incluida en todos los emails.</div>
+  <div class="note-box">3. <strong>Pregunta directamente</strong> si hay plazas con TA o RA para Fall 2027. El email ya lo hace.</div>
+  <div class="note-box">4. <strong>Follow-up a las 2 semanas</strong> si no responden — es completamente normal en academia.</div>
+  <div class="note-box">5. <strong>Verifica los emails</strong> en el sitio web del departamento antes de enviar — pueden haber cambiado.</div>
 </div>`; }
 
-function tabProfesores(u){ return `
+function tabProfesores(u){
+  const pSubj='PhD Inquiry — Differential Equations & Analysis | Fall 2027 | Jefferson Pinzon';
+  return `
 <div class="tab-content">
   <div class="note-box g" style="margin-bottom:14px">
-    <strong>Tu área: Ecuaciones Diferenciales & Análisis.</strong> Estos son los profesores más alineados con tu tesis. Siempre verifica en el sitio web del departamento que siguen activos y aceptando estudiantes nuevos.
+    <strong>Tu área: Ecuaciones Diferenciales & Análisis.</strong> Tienes tesis en EDPs — eso es exactamente lo que estos profesores buscan. Verifica en el sitio web del departamento que siguen activos antes de enviar.
   </div>
-  ${u.profs.map(p=>`
+  ${u.profs.map(p=>{
+    const pUrl=p.profEmail?gmailUrl(p.profEmail,pSubj,p.emailBody||''):null;
+    return `
   <div class="doc-item">
     <div class="doc-icon">${p.rel==='Alto'?'🎯':p.rel==='Medio'?'🔵':'🔍'}</div>
     <div class="doc-text">
       <div class="doc-name">${p.name}</div>
       <div class="doc-detail"><strong>${p.area}</strong><br>${p.note}</div>
+      ${p.profEmail?`<div style="margin-top:7px;display:flex;gap:6px;flex-wrap:wrap">
+        <a href="${pUrl}" target="_blank" class="gmail-btn b" style="padding:5px 13px;font-size:.68rem">✉️ Email</a>
+        <span style="font-size:.64rem;color:var(--sub);align-self:center">${p.profEmail}</span>
+      </div>`:''}
     </div>
     <div class="doc-status ${p.rel==='Alto'?'rec':'opt'}">${p.rel==='Alto'?'Alta relevancia':p.rel==='Medio'?'Relevante':'Ver sitio web'}</div>
-  </div>`).join('')}
+  </div>`}).join('')}
   <div class="note-box gold" style="margin-top:12px">
-    <strong>Cómo usarlo:</strong> Busca el paper más reciente del profesor en Google Scholar → léelo → menciona UN resultado específico en tu email. Eso te diferencia del 99% de los aplicantes. Recuerda mencionar que tu tesis fue en ecuaciones diferenciales y que quieres continuar en esa línea o en análisis.
+    <strong>El botón ✉️ Email</strong> abre Gmail con el mensaje ya escrito y dirigido al profesor. Solo verifica el correo en el sitio web del departamento antes de enviar — pueden haber cambiado.
   </div>
 </div>`; }
 
-function copyEmail(id){
-  const u = UNI.find(x=>x.id===id);
-  navigator.clipboard.writeText(u.email).then(()=>{
-    const btn = event.target;
-    const orig = btn.textContent;
+function copyEmailText(elId,btn){
+  const el=document.getElementById(elId);
+  if(!el) return;
+  navigator.clipboard.writeText(el.innerText).then(()=>{
+    const orig=btn.textContent;
     btn.textContent='✅ Copiado!';
     setTimeout(()=>btn.textContent=orig,2000);
   });
