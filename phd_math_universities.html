@@ -403,6 +403,17 @@ a:hover{text-decoration:underline}
 .docs-msg.ok{background:var(--green-bg);color:var(--green-d);border:1.5px solid #b8f47e;display:block}
 .docs-msg.err{background:var(--red-bg);color:var(--red);border:1.5px solid #ffb3b3;display:block}
 
+/* UNI DOC UPLOAD (inline inside modal doc-items) */
+.uni-upl-row{display:flex;align-items:center;gap:6px;margin-top:7px;flex-wrap:wrap}
+.uni-upl-btn{background:var(--purple-bg);color:#7b2d8b;border:1.5px solid #d4a8f0;border-radius:20px;padding:4px 11px;font-size:.64rem;font-weight:700;cursor:pointer;transition:.15s;white-space:nowrap;display:inline-block}
+.uni-upl-btn:hover{background:#ede0f7;border-color:var(--purple)}
+.udoc-chip{display:inline-flex;align-items:center;gap:3px;background:#fff;border:1.5px solid #d4a8f0;border-radius:20px;padding:2px 8px;font-size:.61rem;color:#7b2d8b;max-width:160px}
+.udoc-chip-link{color:#7b2d8b;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:110px;display:inline-block}
+.udoc-chip-link:hover{text-decoration:underline}
+.udoc-del{background:none;border:none;color:#ccc;font-size:.68rem;cursor:pointer;padding:0;line-height:1;flex-shrink:0}
+.udoc-del:hover{color:var(--red)}
+.uni-upl-spin{font-size:.6rem;color:var(--sub)}
+
 /* GITHUB PAGES SECTION */
 .gh-section{margin:0 20px 14px;background:var(--green-bg);border:1.5px solid #b8f47e;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .gh-section .collapsible-header:hover{background:rgba(88,204,2,.07)}
@@ -1340,6 +1351,7 @@ function openModal(id){
 
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow='hidden';
+  loadUniDocs(id);
 }
 
 function switchTab(i){
@@ -1450,18 +1462,22 @@ function tabTimeline(u){ return `
 </div>`; }
 
 function tabDocs(u){ return `
-<div class="tab-content">
+<div class="tab-content" id="tab-docs-${u.id}">
   <div class="note-box t" style="margin-bottom:14px">
     <strong>Como F1 con TA/RA:</strong> El programa emite tu nuevo I-20 basado en el funding — no necesitas bank statements. El tuition waiver cubre matrícula. El stipend mensual cubre tu manutención.
   </div>
-  ${u.docs.map(d=>`
+  ${u.docs.map((d,i)=>`
   <div class="doc-item">
     <div class="doc-icon">${d.ic}</div>
-    <div class="doc-text">
+    <div class="doc-text" style="min-width:0;flex:1">
       <div class="doc-name">${d.n}</div>
       ${d.d?`<div class="doc-detail">${d.d}</div>`:''}
+      <div class="uni-upl-row">
+        <label class="uni-upl-btn">📎 Subir<input type="file" style="display:none" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" onchange="uploadUniDoc(this,'${u.id}',${i})"></label>
+        <div id="udoc-${u.id}-${i}" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center"><span class="uni-upl-spin">···</span></div>
+      </div>
     </div>
-    <div class="doc-status ${d.st}">${d.st==='req'?'Requerido':d.st==='rec'?'Recomendado':'Opcional'}</div>
+    <div class="doc-status ${d.st}" style="flex-shrink:0">${d.st==='req'?'Requerido':d.st==='rec'?'Recomendado':'Opcional'}</div>
   </div>`).join('')}
 </div>`; }
 
@@ -1632,6 +1648,53 @@ requestAnimationFrame(()=>{
 </div>
 
 <script>
+// ─── UNI-SPECIFIC DOC UPLOAD ────────────────────────────────────────────────
+async function uploadUniDoc(input, uid, docIdx){
+  const file = input.files[0];
+  if(!file) return;
+  if(file.size > 20*1024*1024){ alert('Archivo demasiado grande (máx. 20 MB)'); return; }
+  initSupabase();
+  const safe = file.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+  const path = uid+'/doc'+docIdx+'_'+Date.now()+'_'+safe;
+  const slot = document.getElementById('udoc-'+uid+'-'+docIdx);
+  if(slot) slot.innerHTML = '<span class="uni-upl-spin">⏳ Subiendo...</span>';
+  const { error } = await sb.storage.from(BUCKET).upload(path, file, {upsert:false});
+  input.value = '';
+  if(error){ if(slot) slot.innerHTML='<span style="color:var(--red);font-size:.62rem">❌ Error</span>'; alert('Error: '+error.message); return; }
+  loadUniDocs(uid);
+}
+
+async function loadUniDocs(uid){
+  initSupabase();
+  const { data } = await sb.storage.from(BUCKET).list(uid, {sortBy:{column:'name',order:'asc'}});
+  if(!data) return;
+  // Clear all slots for this university first
+  document.querySelectorAll('[id^="udoc-'+uid+'-"]').forEach(el=>{ el.innerHTML=''; });
+  // Group by doc index prefix
+  data.filter(f=>f.name && /^doc\d+_/.test(f.name)).forEach(f=>{
+    const m = f.name.match(/^doc(\d+)_\d+_(.*)/);
+    if(!m) return;
+    const [,idx,originalName] = m;
+    const slot = document.getElementById('udoc-'+uid+'-'+idx);
+    if(!slot) return;
+    const path = uid+'/'+f.name;
+    const { data:urlData } = sb.storage.from(BUCKET).getPublicUrl(path);
+    const url = urlData?.publicUrl||'#';
+    const chip = document.createElement('span');
+    chip.className = 'udoc-chip';
+    chip.innerHTML = `<a class="udoc-chip-link" href="${url}" target="_blank" title="${originalName}">📄 ${originalName}</a><button class="udoc-del" onclick="deleteUniDoc('${path}','${uid}','${idx}')" title="Eliminar">✕</button>`;
+    slot.appendChild(chip);
+  });
+}
+
+async function deleteUniDoc(path, uid, idx){
+  const name = path.split('_').slice(2).join('_');
+  if(!confirm('¿Eliminar '+name+'?')) return;
+  initSupabase();
+  await sb.storage.from(BUCKET).remove([path]);
+  loadUniDocs(uid);
+}
+
 // ─── SUPABASE DOCS ───────────────────────────────────────────────────────────
 const SB_URL  = 'https://godtbdedfvjtaxkuizro.supabase.co';
 const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdvZHRiZGVkZnZqdGF4a3VpenJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1MTM0NzUsImV4cCI6MjA5ODA4OTQ3NX0.pBJ-tzRH4qTlK95lb5VLtgu5kw2tp-Dl0ammyeCZGnQ';
