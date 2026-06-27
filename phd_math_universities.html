@@ -338,6 +338,71 @@ a:hover{text-decoration:underline}
 .mt-m{background:var(--blue-bg);color:var(--blue-d);border:1.5px solid #7dd8fb;font-size:.6rem;padding:2px 7px;border-radius:5px}
 .mt-s{background:var(--green-bg);color:var(--green-d);border:1.5px solid #b8f47e;font-size:.6rem;padding:2px 7px;border-radius:5px}
 
+/* DOCS FAB */
+.docs-fab{position:fixed;bottom:24px;right:24px;z-index:900;background:var(--purple);color:#fff;border:none;border-radius:50px;padding:13px 20px;font-size:.85rem;font-weight:800;box-shadow:0 4px 18px rgba(155,89,182,.45);display:flex;align-items:center;gap:7px;cursor:pointer;transition:.2s}
+.docs-fab:hover{background:#8e44a3;transform:translateY(-2px);box-shadow:0 8px 28px rgba(155,89,182,.5)}
+
+/* DOCS OVERLAY */
+.docs-overlay{position:fixed;inset:0;background:rgba(20,40,80,.55);z-index:1100;display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto;backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}
+.docs-overlay.open{opacity:1;pointer-events:all}
+
+/* DOCS MODAL */
+.docs-modal{background:#fff;border:1.5px solid var(--border);border-radius:22px;width:100%;max-width:680px;overflow:hidden;transform:translateY(20px) scale(.97);transition:transform .25s;margin:auto;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+.docs-overlay.open .docs-modal{transform:translateY(0) scale(1)}
+.docs-mhead{background:linear-gradient(135deg,var(--purple-bg),#e8d5f7);padding:22px 24px;display:flex;align-items:center;justify-content:space-between}
+.docs-mhead h2{font-size:1.1rem;font-weight:900;color:#4a1a6e}
+.docs-mhead p{font-size:.72rem;color:#7b2d8b;margin-top:2px}
+.docs-close{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.8);border:1.5px solid rgba(0,0,0,.1);color:var(--sub);font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s}
+.docs-close:hover{background:#fff;color:var(--text)}
+
+/* DOCS CATEGORY TABS */
+.docs-cats{display:flex;background:var(--card2);border-bottom:2px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.docs-cats::-webkit-scrollbar{display:none}
+.docs-cat{padding:11px 14px;font-size:.73rem;font-weight:700;color:var(--sub);white-space:nowrap;border-bottom:3px solid transparent;cursor:pointer;transition:.15s;margin-bottom:-2px}
+.docs-cat:hover{color:var(--text)}
+.docs-cat.on{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* DOCS BODY */
+.docs-body{padding:20px 22px}
+
+/* UPLOAD AREA */
+.upload-area{border:2.5px dashed #d4a8f0;border-radius:14px;padding:28px 20px;text-align:center;background:var(--purple-bg);cursor:pointer;transition:.2s;margin-bottom:16px}
+.upload-area:hover,.upload-area.drag{border-color:var(--purple);background:#ede0f7}
+.upload-area input[type=file]{display:none}
+.upload-icon{font-size:2rem;margin-bottom:8px}
+.upload-txt{font-size:.82rem;color:#7b2d8b;font-weight:700}
+.upload-sub{font-size:.68rem;color:var(--sub);margin-top:4px}
+.upload-btn{display:inline-block;margin-top:12px;background:var(--purple);color:#fff;border-radius:30px;padding:8px 22px;font-size:.78rem;font-weight:800;border:none;cursor:pointer;transition:.15s}
+.upload-btn:hover{background:#8e44a3}
+
+/* PROGRESS BAR */
+.upload-progress{background:var(--card2);border:1.5px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px;display:none}
+.upload-progress.show{display:block}
+.up-name{font-size:.76rem;font-weight:700;color:var(--text);margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.up-bar{height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden}
+.up-fill{height:100%;background:var(--purple);border-radius:3px;width:0;transition:width .3s}
+.up-status{font-size:.65rem;color:var(--sub);margin-top:4px}
+
+/* FILE LIST */
+.docs-file-list{display:flex;flex-direction:column;gap:8px;max-height:340px;overflow-y:auto}
+.docs-empty{text-align:center;padding:28px;color:var(--sub);font-size:.78rem}
+.docs-file{background:var(--card2);border:1.5px solid var(--border);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px}
+.df-icon{font-size:1.4rem;flex-shrink:0}
+.df-info{flex:1;min-width:0}
+.df-name{font-size:.78rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.df-meta{font-size:.62rem;color:var(--sub);margin-top:2px}
+.df-actions{display:flex;gap:6px;flex-shrink:0}
+.df-btn{padding:5px 11px;border-radius:20px;font-size:.66rem;font-weight:700;border:1.5px solid;cursor:pointer;transition:.15s;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.df-dl{background:var(--blue-bg);color:var(--blue-d);border-color:#7dd8fb}
+.df-dl:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.df-del{background:var(--red-bg);color:var(--red);border-color:#ffb3b3}
+.df-del:hover{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* DOCS MSG */
+.docs-msg{padding:8px 12px;border-radius:8px;font-size:.74rem;margin-bottom:10px;display:none}
+.docs-msg.ok{background:var(--green-bg);color:var(--green-d);border:1.5px solid #b8f47e;display:block}
+.docs-msg.err{background:var(--red-bg);color:var(--red);border:1.5px solid #ffb3b3;display:block}
+
 /* GITHUB PAGES SECTION */
 .gh-section{margin:0 20px 14px;background:var(--green-bg);border:1.5px solid #b8f47e;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .gh-section .collapsible-header:hover{background:rgba(88,204,2,.07)}
@@ -1519,6 +1584,170 @@ requestAnimationFrame(()=>{
     requestAnimationFrame(()=>{ el.style.width=w; });
   });
 });
+</script>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- DOCS FAB -->
+<button class="docs-fab" onclick="openDocs()">📁 Mis Documentos</button>
+
+<!-- DOCS MODAL -->
+<div class="docs-overlay" id="docsOverlay" onclick="closeDocs(event)">
+  <div class="docs-modal" id="docsModal">
+    <div class="docs-mhead">
+      <div>
+        <h2>📁 Mis Documentos de Aplicación</h2>
+        <p>PDFs subidos a Supabase Storage — accesibles desde cualquier dispositivo</p>
+      </div>
+      <button class="docs-close" onclick="closeDocs(null,true)">✕</button>
+    </div>
+    <div class="docs-cats" id="docsCats">
+      <div class="docs-cat on" data-cat="sop" onclick="switchCat(this)">📝 SoP</div>
+      <div class="docs-cat" data-cat="cv" onclick="switchCat(this)">📄 CV / Resume</div>
+      <div class="docs-cat" data-cat="transcripts" onclick="switchCat(this)">🎓 Transcripts</div>
+      <div class="docs-cat" data-cat="cartas" onclick="switchCat(this)">✉️ Cartas de Rec.</div>
+      <div class="docs-cat" data-cat="tests" onclick="switchCat(this)">📊 GRE / Tests</div>
+      <div class="docs-cat" data-cat="otros" onclick="switchCat(this)">📂 Otros</div>
+    </div>
+    <div class="docs-body">
+      <div class="docs-msg" id="docsMsg"></div>
+      <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
+        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" onchange="uploadFiles(this.files)">
+        <div class="upload-icon">☁️</div>
+        <div class="upload-txt">Arrastra archivos aquí o haz clic para seleccionar</div>
+        <div class="upload-sub">PDF, Word, imágenes — máx. 20 MB por archivo</div>
+        <button class="upload-btn" onclick="event.stopPropagation();document.getElementById('fileInput').click()">Seleccionar archivos</button>
+      </div>
+      <div class="upload-progress" id="uploadProgress">
+        <div class="up-name" id="upName"></div>
+        <div class="up-bar"><div class="up-fill" id="upFill"></div></div>
+        <div class="up-status" id="upStatus">Subiendo...</div>
+      </div>
+      <div class="docs-file-list" id="docsFileList">
+        <div class="docs-empty">Cargando documentos...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── SUPABASE DOCS ───────────────────────────────────────────────────────────
+const SB_URL  = 'https://godtbdedfvjtaxkuizro.supabase.co';
+const SB_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdvZHRiZGVkZnZqdGF4a3VpenJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1MTM0NzUsImV4cCI6MjA5ODA4OTQ3NX0.pBJ-tzRH4qTlK95lb5VLtgu5kw2tp-Dl0ammyeCZGnQ';
+const BUCKET  = 'phd-docs';
+let sb, currentCat = 'sop';
+
+function initSupabase(){
+  if(sb) return;
+  sb = window.supabase.createClient(SB_URL, SB_KEY);
+}
+
+// ─── MODAL ───────────────────────────────────────────────────────────────────
+function openDocs(){
+  initSupabase();
+  document.getElementById('docsOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  loadFiles();
+}
+function closeDocs(e, force){
+  if(!force && e && e.target !== document.getElementById('docsOverlay')) return;
+  document.getElementById('docsOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ─── CATEGORY TABS ───────────────────────────────────────────────────────────
+function switchCat(el){
+  document.querySelectorAll('.docs-cat').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  currentCat = el.dataset.cat;
+  loadFiles();
+}
+
+// ─── UPLOAD ──────────────────────────────────────────────────────────────────
+function dragOver(e){ e.preventDefault(); document.getElementById('uploadArea').classList.add('drag'); }
+function dragLeave(){ document.getElementById('uploadArea').classList.remove('drag'); }
+function dropFile(e){
+  e.preventDefault();
+  dragLeave();
+  uploadFiles(e.dataTransfer.files);
+}
+
+async function uploadFiles(files){
+  if(!files||!files.length) return;
+  initSupabase();
+  showMsg('','');
+  for(const file of files){
+    if(file.size > 20*1024*1024){ showMsg('❌ '+file.name+' supera 20 MB','err'); continue; }
+    const path = currentCat+'/'+Date.now()+'_'+file.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+    showProgress(file.name, 0);
+    const { error } = await sb.storage.from(BUCKET).upload(path, file, { upsert:false });
+    if(error){ showMsg('❌ Error: '+error.message,'err'); hideProgress(); continue; }
+    showProgress(file.name, 100, '¡Subido!');
+    setTimeout(hideProgress, 1200);
+    showMsg('✅ '+file.name+' subido correctamente','ok');
+    await loadFiles();
+  }
+  document.getElementById('fileInput').value='';
+}
+
+function showProgress(name, pct, status){
+  const el=document.getElementById('uploadProgress');
+  el.classList.add('show');
+  document.getElementById('upName').textContent=name;
+  document.getElementById('upFill').style.width=pct+'%';
+  document.getElementById('upStatus').textContent=status||'Subiendo... '+pct+'%';
+}
+function hideProgress(){ document.getElementById('uploadProgress').classList.remove('show'); }
+
+// ─── LIST FILES ──────────────────────────────────────────────────────────────
+async function loadFiles(){
+  initSupabase();
+  const list=document.getElementById('docsFileList');
+  list.innerHTML='<div class="docs-empty">Cargando...</div>';
+  const { data, error } = await sb.storage.from(BUCKET).list(currentCat, { sortBy:{column:'created_at',order:'desc'} });
+  if(error){ list.innerHTML='<div class="docs-empty">⚠️ '+error.message+'</div>'; return; }
+  const files=(data||[]).filter(f=>f.name && f.name!=='.emptyFolderPlaceholder');
+  if(!files.length){ list.innerHTML='<div class="docs-empty">Sin documentos en esta categoría.<br>Sube tu primer archivo arriba.</div>'; return; }
+  list.innerHTML=files.map(f=>{
+    const path=currentCat+'/'+f.name;
+    const { data:urlData }=sb.storage.from(BUCKET).getPublicUrl(path);
+    const url=urlData?.publicUrl||'#';
+    const ext=(f.name.split('.').pop()||'').toLowerCase();
+    const icon=ext==='pdf'?'📄':['jpg','jpeg','png'].includes(ext)?'🖼️':'📎';
+    const kb=f.metadata?.size ? (f.metadata.size/1024).toFixed(0)+' KB' : '';
+    const dt=f.created_at ? new Date(f.created_at).toLocaleDateString('es-ES') : '';
+    const displayName=f.name.replace(/^\d+_/,'');
+    return `<div class="docs-file">
+      <div class="df-icon">${icon}</div>
+      <div class="df-info">
+        <div class="df-name" title="${displayName}">${displayName}</div>
+        <div class="df-meta">${[kb,dt].filter(Boolean).join(' · ')}</div>
+      </div>
+      <div class="df-actions">
+        <a href="${url}" target="_blank" class="df-btn df-dl">⬇️ Ver</a>
+        <button class="df-btn df-del" onclick="deleteFile('${path}','${displayName}')">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── DELETE ──────────────────────────────────────────────────────────────────
+async function deleteFile(path, name){
+  if(!confirm('¿Eliminar '+name+'?')) return;
+  const { error }=await sb.storage.from(BUCKET).remove([path]);
+  if(error){ showMsg('❌ Error al eliminar: '+error.message,'err'); return; }
+  showMsg('🗑️ '+name+' eliminado','ok');
+  loadFiles();
+}
+
+// ─── MESSAGE ─────────────────────────────────────────────────────────────────
+function showMsg(txt, type){
+  const el=document.getElementById('docsMsg');
+  el.textContent=txt;
+  el.className='docs-msg '+(type||'');
+  if(txt) setTimeout(()=>{ el.className='docs-msg'; },4000);
+}
 </script>
 </body>
 </html>
