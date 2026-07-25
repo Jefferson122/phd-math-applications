@@ -451,7 +451,7 @@ a:hover{text-decoration:underline}
   <div class="pdiv"></div>
   <div class="ps"><span class="v info">VA</span><span class="l">Residente</span></div>
   <div class="pdiv"></div>
-  <div class="ps"><span class="v ok">6</span><span class="l">Programas</span></div>
+  <div class="ps"><span class="v ok">5</span><span class="l">Programas</span></div>
   <div class="pdiv"></div>
   <div class="ps"><span class="v warn">&lt;50mi</span><span class="l">Radio máx.</span></div>
   <span class="pbadge f1">F1 Internacional</span>
@@ -462,7 +462,7 @@ a:hover{text-decoration:underline}
 
 <div class="alert">
   <div class="alert-icon">⚡</div>
-  <div><strong>Acción inmediata:</strong> GMU y American abren primero (agosto) — escríbeles a sus profesores ya. UMD College Park (15 Dic 2026) tiene el deadline más cercano del grupo de septiembre. Tienes tesis en EDPs + 3 cartas listas + puedes obtener Duolingo, GRE Math y GRE General. Estás en muy buena posición para los 6 programas (excluidas las opciones de Baltimore por distancia).</div>
+  <div><strong>Acción inmediata:</strong> GMU y American abren primero (agosto) — escríbeles a sus profesores ya. UMD College Park (15 Dic 2026) tiene el deadline más cercano del grupo de septiembre. Tienes tesis en EDPs + 3 cartas listas + puedes obtener Duolingo, GRE Math y GRE General. Estás en muy buena posición para los 5 programas (excluidas Baltimore por distancia y CUA por no tener PhD en Matemáticas).</div>
 </div>
 
 <!-- APPLICATION PHASES -->
@@ -507,7 +507,7 @@ a:hover{text-decoration:underline}
       <div class="phase-head">
         <div class="phase-num">🔥 Grupo 2 — Abre Septiembre 2026</div>
         <div class="phase-date-range">📂 Sep 2026</div>
-        <div class="phase-count">4 programas · UMD tiene el deadline más cercano (15 Dic)</div>
+        <div class="phase-count">3 programas · UMD tiene el deadline más cercano (15 Dic)</div>
       </div>
       <div class="phase-schools">
         <div class="phase-school-row" onclick="openModal('umd')">
@@ -531,18 +531,11 @@ a:hover{text-decoration:underline}
             <div class="phase-school-dl">📂 Sep 2026 · ⏰ 1 Feb 2027</div>
           </div>
         </div>
-        <div class="phase-school-row" onclick="openModal('cua')">
-          <div class="phase-school-dot dot-s"></div>
-          <div class="phase-school-info">
-            <div class="phase-school-name">Catholic Univ. of America</div>
-            <div class="phase-school-dl">📂 Sep 2026 · ⏰ 15 Feb 2027</div>
-          </div>
-        </div>
       </div>
       <div class="phase-divider"></div>
       <div class="phase-reqs">
         <div class="phase-req-title">📋 Ten listo antes de que abra</div>
-        <div class="phase-req-item">👤 <strong>Contacta a Tadmor/Jabin/Margetis/Okoudjou (UMD), Toni (Howard), Gualdani (GWU) y Holliman (CUA)</strong> — jun/jul (UMD es urgente)</div>
+        <div class="phase-req-item">👤 <strong>Contacta a Tadmor/Jabin/Margetis/Okoudjou (UMD), Toni (Howard) y Gualdani (GWU)</strong> — jun/jul (UMD es urgente)</div>
         <div class="phase-req-item">🎯 <strong>Duolingo ≥ 110–125</strong> según programa (UMD el más alto: 125)</div>
         <div class="phase-req-item">📝 <strong>SOP 2–3 págs.</strong> por programa</div>
         <div class="phase-req-item">✉️ <strong>3 Cartas</strong> ya las tienes ✓</div>
@@ -568,7 +561,7 @@ a:hover{text-decoration:underline}
       <div class="mdoc-num mn1">1</div>
       <div class="mdoc-body">
         <div class="mdoc-name">🎯 Duolingo English Test (DET)</div>
-        <div class="mdoc-detail">Score objetivo: <strong>≥ 125</strong> para cubrir TODAS las universidades incluidas UMD (la más exigente). Mínimo aceptable: 110 (CUA, Howard, GMU). Se toma en casa — resultado en 2 días. Puedes repetirlo cuando necesites mejorar el puntaje.</div>
+        <div class="mdoc-detail">Score objetivo: <strong>≥ 125</strong> para cubrir TODAS las universidades incluidas UMD (la más exigente). Mínimo aceptable: 110 (Howard, GMU). Se toma en casa — resultado en 2 días. Puedes repetirlo cuando necesites mejorar el puntaje.</div>
         <div class="mdoc-when">📅 Tomar: Jun–Jul 2026 · Enviar resultados oficiales: Oct–Nov 2026</div>
         <div class="mdoc-tags">
           <span class="mt-all">TODAS las universidades</span>
@@ -711,7 +704,7 @@ a:hover{text-decoration:underline}
 
 <div class="controls">
   <input class="search" type="text" id="search" placeholder="🔍 Buscar..." oninput="run()">
-  <button class="fb on" onclick="setTier('all',this)">Todas (6)</button>
+  <button class="fb on" onclick="setTier('all',this)">Todas (5)</button>
   <button class="fb" onclick="setTier('s',this)">Safety</button>
   <button class="fb" onclick="setTier('m',this)">Match</button>
   <button class="fb" onclick="setTier('r',this)">Reach</button>
@@ -742,49 +735,6 @@ a:hover{text-decoration:underline}
 const ME = {gpa:2.99, gpa60:3.25, visa:'F1', state:'VA', loc:'Alexandria 22311'};
 
 const UNI = [
-{
-  id:'cua', name:'Catholic University of America', city:'Washington', state:'DC',
-  program:'PhD Mathematics', tier:'s', priority:1, near:true, ra:true,
-  dist:'4 mi · 8 min en carro / Metro', match:82,
-  gpaMin:3.0, gpaAvg:'3.1–3.5', stipend:'$18,000–$20,000', waiver:true,
-  ranking:'R2 · DC Area', cohort:'3–6', duration:'4–5 años',
-  deadline:'15 Feb 2027', deadlineOpen:'Sep 2026', deadlineType:'ok',
-  toefl:110, gre:'No requerido', greSubj:'No requerido', acceptRate:'~40%',
-  fund:['TA','RA'],
-  stats:{rate:'~40%', apps:'~25', admitted:'~8–10', minGPA:'2.9 (holistic)', source:'Peterson\'s + Dept. website'},
-  pros:['La más cercana — 4 mi de tu casa','GRE no requerido','Proceso holístico — valoran contexto','TA + RA disponibles','Programa pequeño = trato personalizado'],
-  strategy:'Tu mejor opción por cercanía y perfil de acceso. Con 4 millas de distancia y un proceso holístico, tu GPA reciente 3.25 y tendencia positiva son exactamente lo que buscan. Contacta directamente al Director del Programa en septiembre. Pequeña cohorte = más chance de funding.',
-  areas:['Análisis Real','Álgebra Abstracta','Topología','Ecuaciones Diferenciales','Matemática Aplicada'],
-  courses:{
-    'Año 1 — Core':['Real Analysis I y II','Abstract Algebra I y II','Complex Analysis','Linear Algebra Avanzado'],
-    'Año 1 — Electivos':['Topology I','Ordinary Differential Equations','Numerical Methods'],
-    'Año 2 — Especialización':['Research Seminar','Teaching Practicum','Electivos de área','Literature Review'],
-    'Año 3–5 — Investigación':['Qualifying Exams','Dissertation Research','Conferencias','Publicaciones']
-  },
-  timeline:[
-    {m:'Jun–Jul 2026',st:'now',a:'Toma el Duolingo si no lo tienes (mín 110)',d:'El Duolingo mínimo más bajo del área. Se hace en casa y el resultado llega en 2 días.'},
-    {m:'Jul 2026',st:'now',a:'Email al Director del Programa',d:'CUA tiene un proceso muy accesible. Email preguntando por TA/RA disponibilidad Fall 2027.'},
-    {m:'Sep 2026',st:'future',a:'Convocatoria abre',d:'La aplicación online abre en septiembre. Crea tu cuenta apenas abra.'},
-    {m:'Ago–Sep 2026',st:'future',a:'Escribe tu Statement of Purpose',d:'2 páginas. Enfoca en: tendencia positiva, contexto del GPA, interés en matemáticas, por qué CUA (distancia, programa personalizado).'},
-    {m:'Oct 2026',st:'future',a:'Pide 3 cartas de recomendación',d:'Dales 2 meses. Mínimo 2 de profesores de matemáticas.'},
-    {m:'Nov–Dic 2026',st:'future',a:'Finaliza SOP + documentos',d:'Transcripts apostillados, Duolingo score oficial, CV actualizado.'},
-    {m:'15 Feb 2027',st:'urgent',a:'DEADLINE OFICIAL',d:'Envía antes del 5 de febrero para evitar errores técnicos.'}
-  ],
-  docs:[
-    {ic:'📝',n:'Statement of Purpose (SOP)',d:'2 páginas. Tendencia positiva, contexto del GPA, por qué CUA, qué quieres investigar. Menciona profesores específicos del departamento.',st:'req'},
-    {ic:'📊',n:'Transcripts oficiales de TODAS las instituciones',d:'Sellados. En inglés o con traducción certificada. Enviar directamente de la institución si es posible.',st:'req'},
-    {ic:'🌐',n:'Duolingo ≥ 110',d:'Mínimo del área. Se toma en casa — resultado en 2 días. Score enviado oficialmente a CUA.',st:'req'},
-    {ic:'✉️',n:'3 Cartas de Recomendación',d:'Mínimo 2 de profesores de matemáticas que conozcan tu capacidad analítica. Una puede ser de un supervisor de investigación.',st:'req'},
-    {ic:'📄',n:'CV / Resume académico',d:'1–2 páginas. Educación, cursos relevantes de math, proyectos, premios, idiomas, experiencia.',st:'req'},
-    {ic:'🌍',n:'Copia Visa F1 + Pasaporte vigente',d:'Para expediente de admisión internacional.',st:'req'},
-    {ic:'🎓',n:'GRE General',d:'NO requerido. No necesitas preocuparte por este.',st:'opt'},
-    {ic:'📐',n:'GRE Mathematics Subject',d:'NO requerido. Si tienes un score bueno (>650) puede ayudar pero no es necesario.',st:'opt'},
-    {ic:'💰',n:'Evidencia financiera',d:'Con TA/RA el programa emite tu I-20 cubriendo funding. Sin TA/RA sí necesitas bank statements.',st:'opt'}
-  ],
-  admEmail:'math@cua.edu', admContact:'Graduate Program Director, Dept. of Mathematics, CUA',
-  visit:{url:'https://www.catholic.edu/visit', note:'CUA no tiene un tour formal para posgrado — el portal de "Visit" es para pregrado. Mejor estrategia: como es tu opción más cercana (4 mi), pide directamente en tu correo a Holliman o al Director de Posgrado una reunión informal en persona el mismo día que visites el campus.'},
-  email:'Dear Graduate Admissions Committee,\n\nI am writing to express my strong interest in the PhD program in Mathematics at The Catholic University of America, starting Fall 2027.\n\nI am an F1 international student based in Alexandria, VA — just 4 miles from your campus, making CUA my top geographic priority. My research centers on partial differential equations: I completed my undergraduate thesis on PDEs, building a solid foundation in classical analysis and nonlinear PDE theory. I have three letters of recommendation ready from faculty who can speak directly to my research potential and mathematical preparation.\n\nMy academic record reflects a clear upward trajectory — a 3.25 GPA over my last 60 credit hours — and I am committed to bringing that same focus and drive to doctoral-level research. All required application materials will be submitted with my complete application.\n\nI would greatly appreciate information about Teaching Assistantship or Research Assistantship opportunities for international PhD students entering Fall 2027.\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
-},
 {
   id:'howard', name:'Howard University', city:'Washington', state:'DC',
   program:'PhD Mathematics', tier:'s', priority:2, near:true, ra:true,
@@ -823,6 +773,11 @@ const UNI = [
   ],
   admEmail:'gradschool@howard.edu', admContact:'Graduate Admissions, Dept. of Mathematics, Howard University',
   visit:{url:'https://admission.howard.edu/visit-howard', note:'Registra un campus tour oficial (llévalo en Sep–Nov, temporada de otoño). Cuando escribas al Dr. Toni, menciona que quieres coordinar una breve visita al departamento el mismo día.'},
+  seminar:{name:'Evolution Equations and Dynamical Systems Seminar', day:'Miércoles', time:'2:10 – 3:00 pm', location:'Room 201, Annex III · Howard University',
+    topic:'Ecuaciones de evolución y sistemas dinámicos — el área exacta del Dr. Toni. También existe el Colloquium general los viernes 4:10–5pm en el Room 213, ASB-B.',
+    sourceUrl:'https://mathematics.howard.edu/faculty-research/colloquium-and-seminars',
+    contactName:'Dr. Bourama Toni', contactEmail:'bourama.toni@howard.edu',
+    requestBody:'Hi Dr. Toni,\n\nI\'m applying to Howard\'s Mathematics PhD program for Fall 2027, and I saw the Evolution Equations and Dynamical Systems seminar meets Wednesdays 2:10–3pm — right in your area. Would it be alright if I sat in sometime this fall? I\'d love to see it in person and say hello.\n\nThanks,\nJefferson Pinzon'},
   email:'Dear Graduate Admissions Committee,\n\nI am writing to inquire about PhD opportunities in Mathematics at Howard University for Fall 2027.\n\nI am an F1 international student currently residing in Alexandria, VA — 9 miles from campus, with direct Metro access via the Green/Yellow Line. My research background centers on partial differential equations: I completed my undergraduate thesis on PDEs, which deepened my commitment to mathematical analysis and nonlinear equation theory. I have three letters of recommendation ready from professors who can speak directly to my academic preparation and research capability.\n\nMy GPA over my last 60 credit hours is 3.25, reflecting a consistent and meaningful upward academic trajectory. I am particularly drawn to Howard\'s collaborative research environment and the opportunity to contribute to a program with such strong tradition and academic mission. All required application materials will be submitted with my complete application.\n\nCould you please let me know about Teaching Assistantship or Research Assistantship availability for international students entering Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
@@ -869,6 +824,11 @@ const UNI = [
   ],
   admEmail:'gradadmissions@gmu.edu', admContact:'Graduate Admissions, Dept. of Mathematical Sciences, GMU',
   visit:{url:'https://www.gmu.edu/admissions-aid/visit', note:'Registra el tour en el calendario oficial (Fairfax, 10 mi de tu casa). Cuando escribas a Antil, Sander, Seshaiyer o Emelianenko, pregunta si puedes pasar por su oficina brevemente ese mismo día.'},
+  seminar:{name:'Mathematics Colloquium', day:'Viernes', time:'3:30 pm', location:'Campus de Fairfax — confirma la sala exacta en el sitio del departamento',
+    topic:'Charlas generales de investigación abiertas a todo el departamento. También existe el CMAI Colloquium los viernes 10:00am, más enfocado en matemática aplicada computacional.',
+    sourceUrl:'https://science.gmu.edu/academics/departments-units/mathematical-sciences/seminars-and-colloquia',
+    contactName:'Dr. Harbir Antil', contactEmail:'hantil@gmu.edu',
+    requestBody:'Hi Dr. Antil,\n\nI\'m applying to GMU\'s Applied Mathematics PhD program for Fall 2027, and I saw the Mathematics Colloquium meets Fridays at 3:30pm. Would it be alright if I sat in on one sometime this fall? I\'d love to see the department in person before applying.\n\nThanks,\nJefferson Pinzon'},
   email:'Dear Graduate Admissions Team,\n\nI am writing to express my strong interest in the PhD program in Applied Mathematics at George Mason University, starting Fall 2027.\n\nI am an F1 international student residing in Alexandria, VA — just 10 miles from GMU\'s Fairfax campus. My research centers on partial differential equations: I completed my undergraduate thesis on PDEs, gaining direct experience with analytic and qualitative methods in PDE theory. I have three letters of recommendation ready from faculty members who know my work closely.\n\nMy GPA over my last 60 credit hours is 3.25 — a clear and consistent upward trajectory. GMU\'s strengths in numerical PDEs and computational modeling align directly with my research background, and the program\'s applied orientation and connections to DC-area research institutions make it an especially strong fit. All required test scores will be submitted with my complete application.\n\nCould you please provide information about Research Assistantship or Teaching Assistantship opportunities for international PhD students for Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
@@ -890,7 +850,7 @@ const UNI = [
     'Año 3–5':['Qualifying Exams','Tesis','Publicaciones']
   },
   timeline:[
-    {m:'Jun–Jul 2026',st:'now',a:'Duolingo ≥ 115',d:'Un poco más alto que CUA y Howard. Tómalo en junio o julio — se hace desde casa.'},
+    {m:'Jun–Jul 2026',st:'now',a:'Duolingo ≥ 115',d:'Un poco más alto que Howard y GMU. Tómalo en junio o julio — se hace desde casa.'},
     {m:'Jul 2026',st:'now',a:'Contacta 1–2 profesores en AU',d:'Escríbeles a profesores de estadística matemática o math aplicada. Pregunta por RA para Fall 2027.'},
     {m:'Ago 2026',st:'future',a:'Convocatoria abre',d:'Aplica temprano — AU procesa en orden de llegada para asignar funding.'},
     {m:'Ago–Oct 2026',st:'future',a:'SOP + cartas de recomendación',d:'Pide las cartas en agosto para que los profesores tengan tiempo suficiente.'},
@@ -907,6 +867,12 @@ const UNI = [
   ],
   admEmail:'math@american.edu', admContact:'Graduate Admissions, Dept. of Mathematics & Statistics, American University',
   visit:{url:'https://www.american.edu/admissions/experience-au/campus-visit.cfm', note:'Reserva un campus visit (L–V 9am–5pm, algunos sábados). Cuando escribas al Dr. Casey, pregúntale si puede reunirse contigo brevemente ese mismo día.'},
+  seminar:{name:'Mathematics & Statistics Colloquium', day:'Martes', time:'3:00 – 4:00 pm', location:'DMTI 111 · American University (con té después de la charla)',
+    topic:'Charlas de investigación del departamento, abiertas al público.',
+    sourceUrl:'https://www.american.edu/cas/mathstat/colloquium.cfm',
+    contactName:'Dr. Stephen Casey', contactEmail:'scasey@american.edu',
+    altContact:'mathstat@american.edu (para unirte a la lista de correo o pedir el link de Zoom)',
+    requestBody:'Hi Dr. Casey,\n\nI\'m applying to American\'s Math & Statistics PhD program for Fall 2027, and I saw the department colloquium meets Tuesdays 3–4pm in DMTI 111. Would it be okay if I came by sometime this semester? I\'d love to see a talk and say hello in person, since I\'m just down the road in Alexandria.\n\nThanks,\nJefferson Pinzon'},
   email:'Dear Graduate Admissions Team,\n\nI am writing to express my strong interest in the PhD program in Mathematics & Statistics at American University, starting Fall 2027.\n\nI am an F1 international student living in Alexandria, VA — just 8 miles from campus, Metro Red Line accessible. I completed my undergraduate thesis on partial differential equations, which grounded me in rigorous analysis and quantitative modeling. I have three letters of recommendation ready from faculty who can speak to my mathematical preparation and research potential.\n\nOver my last 60 credit hours I have maintained a 3.25 GPA, a trajectory of consistent academic growth that I believe reflects my readiness for doctoral work. I am particularly drawn to AU\'s applied focus and its proximity to federal research institutions such as NSF, NIH, and the Census Bureau — exceptional resources for applied mathematics research. All required test scores will be submitted with my complete application.\n\nAre Teaching Assistantship or Research Assistantship positions available for international PhD students for Fall 2027?\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
@@ -945,6 +911,12 @@ const UNI = [
   ],
   admEmail:'math@gwu.edu', admContact:'Graduate Admissions, Dept. of Mathematics, George Washington University',
   visit:{url:'https://graduate.admissions.gwu.edu/visit-events', note:'GWU tiene un tour específico para posgrado (guiado por un estudiante de grad school, ~1 hora). Menciona a la Dra. Gualdani que quieres coordinar una visita breve a su oficina el mismo día.'},
+  seminar:{name:'Seminarios del Depto. de Matemáticas', day:'No confirmado', time:'Varía por semestre',
+    location:'Phillips Hall · George Washington University',
+    topic:'No pude confirmar el horario vigente en el sitio del departamento (la página pública mostraba info de un semestre anterior) — mejor pedirlo directo por correo.',
+    sourceUrl:'https://math.columbian.gwu.edu/all-seminars-colloquia',
+    contactName:'Dr. Maria Gualdani', contactEmail:'gualdani@gwu.edu',
+    requestBody:'Hi Dr. Gualdani,\n\nI\'m applying to GWU\'s Mathematics PhD program for Fall 2027. I wasn\'t able to find a current seminar schedule online — would you mind pointing me to it, and letting me know if visitors are welcome to sit in? I\'d love to see the department in person before applying.\n\nThanks,\nJefferson Pinzon'},
   email:'Dear Graduate Admissions Team,\n\nI am writing to express my interest in the PhD program in Mathematics at George Washington University, starting Fall 2027.\n\nI am an F1 international student living in Alexandria, VA — just 7 miles from GWU\'s Foggy Bottom campus, Metro Blue/Yellow Line accessible. I completed my undergraduate thesis on partial differential equations, and I have three letters of recommendation ready from professors who know my analytical work directly. My GPA over my last 60 credit hours is 3.25, reflecting a consistent upward academic trajectory. All required test scores will be submitted with my complete application.\n\nI am particularly drawn to GWU\'s research strengths in analysis and the program\'s strong ties to Washington DC\'s academic and research community. I would greatly appreciate information about Teaching Assistantship availability and the application process for international students entering Fall 2027.\n\nThank you,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 },
 {
@@ -986,6 +958,12 @@ const UNI = [
   ],
   admEmail:'math-gradoffice@umd.edu', admContact:'Graduate Admissions Office, Dept. of Mathematics, University of Maryland',
   visit:{url:'https://www.admissions.umd.edu/visit', note:'UMD tiene la deadline más cercana (15 Dic) — reserva el tour pronto. Al escribir a Tadmor, Jabin, Margetis u Okoudjou, pregunta si puedes visitar el departamento de matemáticas (no solo el tour general de admisiones) el mismo día.'},
+  seminar:{name:'Mathematics Colloquium', day:'Miércoles', time:'~3:15 pm (confirma la semana exacta)', location:'Kirwan Hall · University of Maryland, College Park',
+    topic:'Charlas generales de investigación. UMD también tiene un PDE-Applied Math Seminar específico — el área exacta de Tadmor, Jabin y Margetis.',
+    sourceUrl:'https://www-math.umd.edu/research/seminars.html',
+    contactName:'Professor Eitan Tadmor', contactEmail:'tadmor@umd.edu',
+    altContact:'mathgrad@deans.umd.edu (coordinación general de posgrado)',
+    requestBody:'Hi Professor Tadmor,\n\nI\'m applying to UMD\'s Mathematics PhD program for Fall 2027, and I saw the department colloquium meets Wednesdays around 3:15pm in Kirwan Hall. Would it be alright if I attended one sometime this fall? I\'d love to see the department in person before applying.\n\nThanks,\nJefferson Pinzon'},
   email:'Dear Graduate Admissions Team,\n\nI am writing to express my strong interest in the PhD program in Mathematics at the University of Maryland, College Park, starting Fall 2027.\n\nI am an F1 international student based in Alexandria, VA — 12 miles from College Park, Metro Green Line accessible. My research background is in partial differential equations: I completed my undergraduate thesis on PDEs, with focus on analytic and qualitative methods in nonlinear PDE theory. I have three letters of recommendation ready from faculty who can speak directly to my research capabilities. All required test scores will be submitted as part of my complete application.\n\nMy GPA over my last 60 credit hours is 3.25, reflecting a clear and consistent upward trajectory. I am particularly drawn to UMD\'s strengths in hyperbolic PDEs and numerical analysis, and I have identified several faculty members whose research aligns closely with my background and interests.\n\nCould you please provide guidance on the application process and Research Assistantship or Teaching Assistantship availability for international students for Fall 2027?\n\nSincerely,\nJefferson Pinzon\njeffersonpinzon2121@gmail.com\nAlexandria, VA 22311 | F1 Visa'
 }
 ];
@@ -1051,14 +1029,6 @@ const PROFS = {
      emailBody:'Dear Dr. Gualdani,\n\n"The Landau equation does not blow up" might be my favorite paper title of the year, and the regularity result behind it is the most compelling nonlinear kinetic PDE work I\'ve found while looking at DC-area programs. I don\'t say "compelling" lightly — I\'ve read a lot of papers putting this list together, and yours are the ones I kept coming back to.\n\nI graduated with my math degree a few years ago; my thesis was linear, deterministic PDE work that later motivated a paper, which is part of why nonlinear kinetic equations feel like the natural next step now that I\'m ready to come back to research.\n\nI\'m applying to GWU for Fall 2027, based in Alexandria (~7 miles). If you\'re taking new PhD students, I\'d love to talk about your current research.\n\nBest,\nJefferson Pinzon'},
     {name:'Verificar en math.gwu.edu', area:'Análisis & EDPs', rel:'Ver web',
      note:'Verifica en el directorio del departamento para profesores activos en análisis funcional o ecuaciones diferenciales.'}
-  ],
-  cua:[
-    {name:'Dr. Curtis Holliman', area:'EDPs No Lineales & Análisis Armónico', rel:'Alto',
-     note:'El mejor match de todo CUA: EDPs no lineales (Schrödinger, Novikov, Fokas-Olver-Rosenau-Qiao) con herramientas de análisis armónico/Fourier — directamente en tu área de tesis. Email inferido del patrón confirmado del departamento (apellido@cua.edu, confirmado con otra profesora del mismo depto) — verifica en mathematics.catholic.edu/faculty-and-research/faculty-profiles/holliman-curtis antes de enviar.',
-     profEmail:'holliman@cua.edu',
-     emailBody:'Dear Dr. Holliman,\n\nI graduated with my math degree a few years ago. My thesis extended the boundary element method to PDEs using radial basis functions (the Dual Reciprocity Method) — it later became the basis for a master\'s student\'s thesis and motivated a paper. I\'ve kept reading since, and your peakon construction with Himonas and Kenig — using explicit 2-peakon solutions to actually prove ill-posedness for the Novikov equation, rather than just failing to prove well-posedness — is the kind of clever, constructive argument that\'s made me want to come back and pursue this properly, at the doctoral level.\n\nI also saw you co-run the Applied Math in Action program for pre-college students — that\'s part of why I\'d want to work with you, not just study your papers. CUA has felt like the right fit since the first time I looked into the program, not just on paper.\n\nI\'m applying to CUA for Fall 2027 — I live four miles away, so meeting in person is easy. I\'d need RA support. Are you taking new PhD students?\n\nThanks for reading this,\nJefferson Pinzon'},
-    {name:'Verificar en math.cua.edu', area:'EDs & Análisis', rel:'Ver web',
-     note:'CUA tiene un programa pequeño y personalizado. Contacta también al Director de Posgrado de Matemáticas — el equipo es muy accesible y puede orientarte sobre otros profesores disponibles en tu área.'}
   ],
 };
 UNI.forEach(u => u.profs = PROFS[u.id] || []);
@@ -1217,12 +1187,12 @@ function openModal(id){
       </div>
     </div>`;
 
-  const tabs=['📊 Programa','📈 Estadísticas','📅 Timeline','📄 Documentos','👨‍🏫 Profesores','📚 Materias','✉️ Email'];
+  const tabs=['📊 Programa','📈 Estadísticas','📅 Timeline','📄 Documentos','👨‍🏫 Profesores','🎤 Seminario','📚 Materias','✉️ Email'];
   document.getElementById('mtabs').innerHTML = tabs.map((t,i)=>
     `<div class="tab${i===0?' on':''}" onclick="switchTab(${i})">${t}</div>`).join('');
 
   document.getElementById('mcontent').innerHTML =
-    tabPrograma(u) + tabStats(u) + tabTimeline(u) + tabDocs(u) + tabProfesores(u) + tabCourses(u) + tabEmail(u);
+    tabPrograma(u) + tabStats(u) + tabTimeline(u) + tabDocs(u) + tabProfesores(u) + tabSeminario(u) + tabCourses(u) + tabEmail(u);
 
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow='hidden';
@@ -1419,6 +1389,36 @@ function tabEmail(u){
   <div class="note-box">3. <strong>Pregunta directamente</strong> si hay plazas con TA o RA para Fall 2027. El email ya lo hace.</div>
   <div class="note-box">4. <strong>Follow-up a las 2 semanas</strong> si no responden — es completamente normal en academia.</div>
   <div class="note-box">5. <strong>Verifica los emails</strong> en el sitio web del departamento antes de enviar — pueden haber cambiado.</div>
+</div>`; }
+
+function tabSeminario(u){
+  const s = u.seminar;
+  if(!s) return `
+<div class="tab-content">
+  <div class="note-box">No encontré un seminario específico y verificado para este departamento todavía. Escríbele directamente a un profesor de la pestaña "Profesores" y pregúntale si hay un colloquium o seminario al que puedas asistir.</div>
+</div>`;
+  const sUrl = s.contactEmail ? gmailUrl(s.contactEmail, `¿Puedo asistir a ${s.name}? — Jefferson Pinzon`, s.requestBody||'') : null;
+  return `
+<div class="tab-content">
+  <div class="note-box t" style="margin-bottom:14px">
+    <strong>🎤 ${s.name}</strong><br>
+    📅 ${s.day} · ${s.time}<br>
+    📍 ${s.location}
+  </div>
+  <div class="note-box" style="margin-bottom:14px">${s.topic}</div>
+  ${s.sourceUrl?`<div class="note-box gold" style="margin-bottom:14px">Horario en el sitio oficial: <a href="${s.sourceUrl}" target="_blank">${s.sourceUrl}</a> — verifica la fecha exacta antes de ir, los horarios de seminario pueden cambiar semestre a semestre.</div>`:''}
+
+  <div class="sh">A quién escribirle para pedir asistir</div>
+  <div class="email-header">
+    <span class="eh-lbl">Para: </span><span class="eh-name">${s.contactName||''}</span><br>
+    <span class="eh-lbl">Email: </span><a href="mailto:${s.contactEmail||''}" class="eh-addr">${s.contactEmail||''}</a>
+    ${s.altContact?`<br><span class="eh-lbl">Alternativa: </span>${s.altContact}`:''}
+  </div>
+  <div class="email-box" id="email-sem-${u.id}">${s.requestBody||''}</div>
+  ${sUrl?`<div class="btn-row">
+    <a href="${sUrl}" target="_blank" class="gmail-btn b">✉️ Abrir en Gmail</a>
+    <button class="copy-btn" onclick="copyEmailText('email-sem-${u.id}',this)">📋 Copiar texto</button>
+  </div>`:''}
 </div>`; }
 
 function tabProfesores(u){
